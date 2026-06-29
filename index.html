@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SANÉH — Thailand, Bottled.</title>
+  <title>SANÉH — The Fragrance Journey of Thailand</title>
   
-  <!-- Premium Fonts -->
+  <!-- Premium Fonts (Serif & Clean Geometric Sans-Serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@200;300;400;500;600&family=Noto+Sans+Arabic:wght@200;300;400;500;700&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <!-- Main Stylesheet -->
+  <!-- Chanel-Style Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="gatekeeper-active">
@@ -26,7 +26,7 @@
   <div id="gatekeeper" class="gatekeeper-container">
     <div class="gatekeeper-content">
       <div class="brand-intro">
-        <h1 class="brand-logo-large">SANÉH</h1>
+        <h1 class="brand-logo-large">S A N É H</h1>
         <p class="brand-tagline-large">THAILAND, BOTTLED.</p>
         <div class="luxury-divider">
           <span class="gold-diamond">♦</span>
@@ -80,15 +80,21 @@
   <!-- ==================== MAIN APPLICATION ==================== -->
   <div id="app-container" class="app-layout">
     
-    <!-- HEADER -->
+    <!-- HEADER (Minimalist Luxury) -->
     <header class="site-header">
       <div class="header-logo-container">
-        <span class="brand-logo-small">SANÉH</span>
+        <span class="brand-logo-small">S A N É H</span>
         <span class="brand-tagline-small">THAILAND, BOTTLED.</span>
       </div>
       
+      <nav class="header-center-nav">
+        <button class="nav-map-toggle-btn active-nav" id="show-collection-btn" data-i18n="nav_collections">Collections</button>
+        <span class="nav-separator">|</span>
+        <button class="nav-map-toggle-btn" id="show-map-btn" data-i18n="nav_map">Scent Map</button>
+      </nav>
+      
       <div class="header-actions">
-        <!-- Quick Language Toggle -->
+        <!-- Quick Language Dropdown -->
         <div class="lang-dropdown-container">
           <button id="current-lang-display" class="lang-dropdown-trigger">
             <i data-lucide="languages" class="icon-sm"></i>
@@ -118,50 +124,48 @@
     <!-- CONTENT BODY -->
     <main class="main-content">
       
-      <!-- HERO STORY SECTION -->
+      <!-- HERO STORY SECTION (Chanel Slogan Style) -->
       <section class="hero-story-section">
+        <span class="hero-category-label" data-i18n="brand_category">LES VOYA GES OLFACTIFS</span>
         <h2 class="section-title" data-i18n="slogan_title">Not selling perfume, but selling the memory of a place.</h2>
-        <p class="section-subtitle" data-i18n="slogan_desc">Every bottle is a premium fragrance journey. Take the essence of Thailand home with you.</p>
       </section>
 
-      <!-- DUAL PANEL: MAP & CARD -->
-      <div class="experience-grid">
-        
-        <!-- LEFT PANEL: MAP OF THAILAND -->
-        <div class="map-panel">
-          <div class="map-wrapper">
+      <!-- PROVINCE CAROUSEL SELECTOR -->
+      <div class="province-navbar">
+        <button class="prov-nav-item active" data-province="chiangmai">CHIANG MAI</button>
+        <button class="prov-nav-item" data-province="phuket">PHUKET</button>
+        <button class="prov-nav-item" data-province="ayutthaya">AYUTTHAYA</button>
+      </div>
+
+      <!-- MAIN CONTAINER: toggles between Grid and Map view -->
+      <div class="main-view-wrapper">
+
+        <!-- SCENT MAP PANEL (Toggleable tab) -->
+        <div class="map-view-panel hidden" id="map-view-panel">
+          <div class="map-panel-content">
             <h3 class="map-instruction" data-i18n="map_instruction">Select a province to explore its fragrance</h3>
-            
             <div class="map-container">
-              <!-- Stylized Vector Thailand Map Draft -->
               <svg viewBox="0 0 400 600" class="thailand-map-svg">
-                <!-- Outer borders and country shape simulation -->
                 <path class="map-shape" d="M 180,50 C 160,30 190,10 210,20 C 230,30 250,50 250,80 C 250,110 260,120 280,140 C 300,160 320,180 300,200 C 280,220 260,200 240,220 C 220,240 240,260 210,270 C 180,280 170,260 160,250 C 150,240 120,250 115,220 C 110,190 120,180 130,160 C 140,140 150,120 160,110 C 170,100 190,80 180,50 Z" />
                 <path class="map-shape-south" d="M 175,265 C 165,280 155,300 150,330 C 145,360 140,400 135,430 C 130,460 120,490 115,520 C 110,550 120,570 130,580 C 140,590 145,560 148,540 C 151,520 160,500 165,490 C 170,480 175,470 172,450 C 169,430 162,410 160,390 C 158,370 162,350 168,330 C 174,310 185,290 175,265 Z" />
                 
-                <!-- Animated Connection Lines -->
                 <g class="map-lines">
                   <line x1="200" y1="110" x2="300" y2="150" class="map-connector-line" id="line-chiangmai"></line>
                   <line x1="135" y1="460" x2="300" y2="400" class="map-connector-line" id="line-phuket"></line>
                   <line x1="178" y1="210" x2="300" y2="280" class="map-connector-line" id="line-ayutthaya"></line>
                 </g>
 
-                <!-- Clickable Interactive Pins -->
-                <!-- Chiang Mai Pin -->
+                <!-- Pins -->
                 <g class="map-pin active" data-province="chiangmai" transform="translate(200, 110)">
                   <circle cx="0" cy="0" r="14" class="pin-glow"></circle>
                   <circle cx="0" cy="0" r="6" class="pin-core"></circle>
                   <text x="0" y="-20" class="pin-label">Chiang Mai</text>
                 </g>
-                
-                <!-- Ayutthaya Pin -->
                 <g class="map-pin" data-province="ayutthaya" transform="translate(178, 210)">
                   <circle cx="0" cy="0" r="14" class="pin-glow"></circle>
                   <circle cx="0" cy="0" r="6" class="pin-core"></circle>
                   <text x="0" y="-20" class="pin-label">Ayutthaya</text>
                 </g>
-                
-                <!-- Phuket Pin -->
                 <g class="map-pin" data-province="phuket" transform="translate(135, 460)">
                   <circle cx="0" cy="0" r="14" class="pin-glow"></circle>
                   <circle cx="0" cy="0" r="6" class="pin-core"></circle>
@@ -169,19 +173,47 @@
                 </g>
               </svg>
             </div>
-            
-            <!-- Quick Scent Tabs for Mobile Navigation -->
-            <div class="province-selector-mobile">
-              <button class="mobile-prov-btn active" data-province="chiangmai">Chiang Mai</button>
-              <button class="mobile-prov-btn" data-province="ayutthaya">Ayutthaya</button>
-              <button class="mobile-prov-btn" data-province="phuket">Phuket</button>
-            </div>
           </div>
         </div>
 
-        <!-- RIGHT PANEL: INTERACTIVE TRAVEL CARD (FLIPPABLE) -->
-        <div class="card-panel">
+        <!-- COLLECTION MAIN PANEL (Chanel Grid) -->
+        <div class="collection-view-panel" id="collection-view-panel">
           
+          <!-- Province Story Banner -->
+          <div class="province-banner-header">
+            <div class="banner-story-desc">
+              <h3 class="banner-title" id="banner-scent-title">Rain after Tea</h3>
+              <p class="banner-desc" id="banner-scent-desc">The fresh aroma of rain droplets falling onto lush green tea leaves on the misty highlands of Chiang Mai.</p>
+            </div>
+            <button class="discover-card-btn" id="open-travel-card-btn">
+              <i data-lucide="mail-open" class="icon-sm"></i>
+              <span data-i18n="discover_travel_card">Discover Scent Postcard</span>
+            </button>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="product-luxury-grid" id="product-grid-container">
+            <!-- Dynamically Rendered by app.js -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- TRAVEL CARD MODAL (Slides in elegantly) -->
+    <div class="card-modal-overlay" id="card-modal-overlay">
+      <div class="card-modal-container">
+        
+        <div class="card-modal-header">
+          <span class="modal-title" data-i18n="postcard_modal_title">THE TRAVEL POSTCARD</span>
+          <button class="close-modal-btn" id="close-travel-card-btn">
+            <i data-lucide="x" class="icon-sm"></i>
+          </button>
+        </div>
+        
+        <div class="card-modal-body">
           <div class="card-flip-container">
             <div class="card-3d-wrapper" id="travel-card-3d">
               
@@ -196,7 +228,6 @@
                   <h3 class="card-province-title" id="card-front-title">Chiang Mai</h3>
                   <div class="card-front-divider"></div>
                   <p class="card-front-tagline" id="card-front-tagline">"Rain after Tea"</p>
-                  
                   <div class="card-flip-prompt">
                     <span data-i18n="flip_prompt">Click to flip & read story</span>
                     <i data-lucide="rotate-3d" class="icon-xs pulse-animation"></i>
@@ -204,29 +235,23 @@
                 </div>
               </div>
 
-              <!-- CARD BACK (SOFT-TOUCH PAPER LOOK) -->
+              <!-- CARD BACK (Postcard back) -->
               <div class="card-face card-back">
                 <div class="paper-texture"></div>
-                
-                <!-- Back Header -->
                 <div class="card-back-header">
-                  <div class="card-back-logo">SANÉH</div>
+                  <div class="card-back-logo">S A N É H</div>
                   <div class="card-back-stamp">
                     <span class="stamp-text">THAI POST</span>
                     <span class="stamp-price">฿79</span>
                   </div>
                 </div>
                 
-                <!-- Back Layout: Story Left, Details Right -->
                 <div class="card-back-content">
-                  
-                  <!-- Left side: Scent Story & Description -->
                   <div class="card-back-story">
                     <h4 class="scent-title-back" id="card-back-scent-title">Rain after Tea</h4>
                     <p class="scent-description-text" id="card-back-scent-desc">
                       The fresh aroma of rain droplets falling onto lush green tea leaves on the misty highlands of Chiang Mai.
                     </p>
-                    
                     <div class="local-recommendations">
                       <div class="rec-item">
                         <i data-lucide="map-pin" class="rec-icon"></i>
@@ -252,10 +277,7 @@
                     </div>
                   </div>
                   
-                  <!-- Right side: QR Code, Spotify, and Details -->
                   <div class="card-back-meta">
-                    
-                    <!-- Simulated Spotify Widget -->
                     <div class="spotify-simulated-widget">
                       <div class="widget-header">
                         <i data-lucide="music" class="music-icon green-icon animate-spin-slow"></i>
@@ -272,7 +294,6 @@
                       </div>
                     </div>
 
-                    <!-- Ambient Sound Toggle -->
                     <div class="ambient-audio-toggle">
                       <button id="ambient-audio-btn" class="ambient-btn">
                         <i data-lucide="volume-x" class="icon-xs" id="ambient-icon-state"></i>
@@ -280,66 +301,31 @@
                       </button>
                     </div>
 
-                    <!-- QR Code and scan prompt -->
                     <div class="qr-code-section">
                       <div class="qr-code-box">
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://saneh-fragrances-mock.pages.dev/journey/chiangmai" alt="QR Code" class="qr-code-img">
                       </div>
-                      <span class="qr-caption" data-i18n="qr_caption">Scan to watch: How this scent was designed</span>
+                      <span class="qr-caption" data-i18n="qr_caption">Scan to watch video</span>
                     </div>
-
                   </div>
                 </div>
                 
-                <!-- Back Footer: Close/Flip back button -->
                 <div class="card-back-footer">
                   <button class="flip-back-btn" id="flip-back-trigger">
                     <i data-lucide="undo-2" class="icon-xs"></i>
                     <span data-i18n="back_flip_btn">Flip to Front</span>
                   </button>
                 </div>
-                
               </div>
 
             </div>
           </div>
-
-          <!-- PRODUCT PURCHASE BAR (Directly links with Card Selection) -->
-          <div class="product-purchase-box">
-            <div class="product-form-title-group">
-              <h4 class="product-name-purchase" id="purchase-product-name">SANÉH Reed Diffuser - Chiang Mai</h4>
-              <span class="product-price" id="purchase-product-price">$59.00</span>
-            </div>
-            
-            <div class="purchase-options">
-              <!-- Scent format selection -->
-              <div class="format-selector">
-                <button class="format-btn active" data-format="diffuser">
-                  <span data-i18n="format_diffuser">Diffuser</span>
-                </button>
-                <button class="format-btn" data-format="spray">
-                  <span data-i18n="format_spray">Spray</span>
-                </button>
-                <button class="format-btn" data-format="candle">
-                  <span data-i18n="format_candle">Candle</span>
-                </button>
-              </div>
-              
-              <!-- Add to Cart Button -->
-              <button class="add-to-cart-action-btn" id="add-to-cart-btn">
-                <i data-lucide="shopping-bag" class="icon-sm"></i>
-                <span data-i18n="add_to_cart">Add Scent to Cart</span>
-              </button>
-            </div>
-          </div>
-
         </div>
-
+        
       </div>
+    </div>
 
-    </main>
-
-    <!-- SHOPPING CART DRAWER (Simulated) -->
+    <!-- SHOPPING CART DRAWER -->
     <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
     <div class="cart-drawer" id="cart-drawer">
       <div class="cart-header">
@@ -350,7 +336,6 @@
       </div>
       
       <div class="cart-items" id="cart-items-container">
-        <!-- Dynamically injected -->
         <p class="empty-cart-message" data-i18n="empty_cart">Your bag is currently empty.</p>
       </div>
       
@@ -366,21 +351,21 @@
       </div>
     </div>
 
-    <!-- NOTIFICATION POPUP -->
+    <!-- TOAST NOTIFICATION -->
     <div class="toast-notification" id="toast-notification">
       <i data-lucide="check-circle" class="toast-icon"></i>
       <span class="toast-message">Added to cart!</span>
     </div>
 
-    <!-- AUDIO ELEMENTS (For Soundscapes) -->
+    <!-- AUDIO ELEMENTS -->
     <audio id="audio-chiangmai" loop preload="none">
-      <source src="https://assets.mixkit.co/active_storage/sfx/2513/2513-84.wav" type="audio/wav"> <!-- Forest rain simulation -->
+      <source src="https://assets.mixkit.co/active_storage/sfx/2513/2513-84.wav" type="audio/wav">
     </audio>
     <audio id="audio-phuket" loop preload="none">
-      <source src="https://assets.mixkit.co/active_storage/sfx/2443/2443-84.wav" type="audio/wav"> <!-- Ocean waves simulation -->
+      <source src="https://assets.mixkit.co/active_storage/sfx/2443/2443-84.wav" type="audio/wav">
     </audio>
     <audio id="audio-ayutthaya" loop preload="none">
-      <source src="https://assets.mixkit.co/active_storage/sfx/1647/1647-84.wav" type="audio/wav"> <!-- Temple chime / wind bells -->
+      <source src="https://assets.mixkit.co/active_storage/sfx/1647/1647-84.wav" type="audio/wav">
     </audio>
 
     <!-- FOOTER -->
@@ -395,7 +380,6 @@
     
   </div>
 
-  <!-- Custom Scripts -->
   <script src="app.js"></script>
 </body>
 </html>

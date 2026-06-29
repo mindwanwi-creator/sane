@@ -1,5 +1,5 @@
 // ==========================================================================
-// TRANSLATION DICTIONARIES (8 LANGUAGES)
+// TRANSLATION DICTIONARIES (8 LANGUAGES - CHANEL LUXURY UPGRADE)
 // ==========================================================================
 
 const i18n = {
@@ -15,7 +15,7 @@ const i18n = {
     rec_season: "Best Season",
     ambient_toggle: "Play Ambient Sound",
     ambient_toggle_active: "Mute Ambient Sound",
-    qr_caption: "Scan to watch: How this scent was designed",
+    qr_caption: "Scan to watch video",
     format_diffuser: "Diffuser",
     format_spray: "Spray",
     format_candle: "Candle",
@@ -27,6 +27,14 @@ const i18n = {
     checkout_note: "Worldwide premium shipping calculated at checkout.",
     back_flip_btn: "Flip to Front",
     added_toast: "Added to fragrance bag!",
+    
+    // Chanel Upgrades translations
+    brand_category: "LES VOYAGES OLFACTIFS",
+    nav_collections: "Collections",
+    nav_map: "Scent Map",
+    discover_travel_card: "Discover Scent Postcard",
+    postcard_modal_title: "THE TRAVEL POSTCARD",
+    quick_buy: "Add to Bag",
     item_diffuser: "Reed Diffuser",
     item_spray: "Room Spray",
     item_candle: "Scented Candle",
@@ -77,7 +85,7 @@ const i18n = {
     rec_season: "ฤดูกาลที่ดีที่สุด",
     ambient_toggle: "เปิดเสียงบรรยากาศสถานที่",
     ambient_toggle_active: "ปิดเสียงบรรยากาศสถานที่",
-    qr_caption: "สแกนเพื่อรับชม: จังหวัดนี้ถูกออกแบบเป็นกลิ่นได้อย่างไร",
+    qr_caption: "สแกนเพื่อรับชมวิดีโอ",
     format_diffuser: "ก้านหอม",
     format_spray: "สเปรย์หอม",
     format_candle: "เทียนหอม",
@@ -89,8 +97,16 @@ const i18n = {
     checkout_note: "ค่าจัดส่งพรีเมียมไปต่างประเทศจะคำนวณในขั้นตอนชำระเงิน",
     back_flip_btn: "กลับไปด้านหน้า",
     added_toast: "เพิ่มสินค้าลงในตะกร้าแล้ว!",
-    item_diffuser: "ก้านหอมกระจายกลิ่น",
-    item_spray: "สเปรย์ปรับอากาศห้อง",
+    
+    // Chanel Upgrades translations
+    brand_category: "การเดินทางผ่านกลิ่นอายแห่งสยาม",
+    nav_collections: "คอลเลกชัน",
+    nav_map: "แผนที่กลิ่นหอม",
+    discover_travel_card: "ค้นพบการ์ดบันทึกเดินทาง",
+    postcard_modal_title: "การ์ดทราเวลการ์ดบันทึกการเดินทาง",
+    quick_buy: "ใส่ถุงสินค้า",
+    item_diffuser: "ก้านไม้หอมกระจายกลิ่น",
+    item_spray: "สเปรย์ปรับอากาศ",
     item_candle: "เทียนหอมอโรมา",
     footer_terms: "ข้อตกลงและเงื่อนไข",
     footer_privacy: "นโยบายความเป็นส่วนตัว",
@@ -138,7 +154,7 @@ const i18n = {
     rec_season: "最佳旅游季节",
     ambient_toggle: "播放环境白噪音",
     ambient_toggle_active: "静音环境音效",
-    qr_caption: "扫码观看：此款香氛的设计灵感与诞生过程",
+    qr_caption: "扫码观看视频",
     format_diffuser: "无火香薰",
     format_spray: "空间喷雾",
     format_candle: "香薰蜡烛",
@@ -150,8 +166,16 @@ const i18n = {
     checkout_note: "全球优质快递费用将在结账时计算。",
     back_flip_btn: "翻转至正面",
     added_toast: "已成功添加到您的购物袋！",
+    
+    // Chanel Upgrades
+    brand_category: "香氛旅行系列",
+    nav_collections: "甄选系列",
+    nav_map: "寻香地图",
+    discover_travel_card: "探索旅行明信片",
+    postcard_modal_title: "专属旅行明信片",
+    quick_buy: "加入购物袋",
     item_diffuser: "藤条无火香薰",
-    item_spray: "室内香氛喷雾",
+    item_spray: "空间香氛喷雾",
     item_candle: "手工香薰蜡烛",
     footer_terms: "条款与条件",
     footer_privacy: "隐私政策",
@@ -199,7 +223,7 @@ const i18n = {
     rec_season: "أفضل موسم للزيارة",
     ambient_toggle: "تشغيل الصوت المحيطي للمكان",
     ambient_toggle_active: "كتم الصوت المحيطي",
-    qr_caption: "امسح الرمز لمشاهدة: كيف تم تصميم هذا العطر",
+    qr_caption: "امسح الرمز لمشاهدة الفيديو",
     format_diffuser: "عطر القصب",
     format_spray: "رذاذ الغرفة",
     format_candle: "شمعة معطرة",
@@ -211,9 +235,17 @@ const i18n = {
     checkout_note: "يتم حساب تكاليف الشحن الدولي الفاخر عند الدفع.",
     back_flip_btn: "اقلب إلى الأمام",
     added_toast: "تمت الإضافة إلى حقيبة العطور بنجاح!",
+    
+    // Chanel Upgrades
+    brand_category: "رحلات العطور التايلاندية",
+    nav_collections: "المجموعات",
+    nav_map: "خريطة العطور",
+    discover_travel_card: "اكتشف بطاقة بريد العطور",
+    postcard_modal_title: "بطاقة السفر البريدية",
+    quick_buy: "أضف إلى الحقيبة",
     item_diffuser: "موزع عطور القصب",
     item_spray: "رذاذ الغرفة المنعش",
-    item_candle: "شمعة عطرية فاخرة",
+    item_candle: "شمعة معطرة فاخرة",
     footer_terms: "الشروط والأحكام",
     footer_privacy: "سياسة الخصوصية",
 
@@ -250,7 +282,7 @@ const i18n = {
   },
   ja: {
     enter_btn: "香りの旅へ入る",
-    slogan_title: "私たちは香水を売るのではなく、その場所の記憶を売っています。",
+    slogan_title: "私たちは香水を売るのではなく、その場所의 記憶を売っています。",
     slogan_desc: "すべてのボトルは極上の香りの旅。タイのぬくもりと記憶をあなたの自宅へ持ち帰ってください。",
     map_instruction: "県を選択して、その土地の香りを感じてください",
     postcard_label: "トラベルカード",
@@ -260,7 +292,7 @@ const i18n = {
     rec_season: "ベストシーズン",
     ambient_toggle: "現地の環境音を再生",
     ambient_toggle_active: "環境音をミュート",
-    qr_caption: "QRコードをスキャンして視聴：この香りが生まれたストーリー",
+    qr_caption: "QRコードをスキャンして動画を視聴",
     format_diffuser: "ディフューザー",
     format_spray: "ルームスプレー",
     format_candle: "アロマキャンドル",
@@ -272,9 +304,17 @@ const i18n = {
     checkout_note: "世界中へのプレミアム配送料は決済時に計算されます。",
     back_flip_btn: "表面に戻す",
     added_toast: "フレグランスバッグに追加しました！",
+    
+    // Chanel Upgrades
+    brand_category: "タイ香りの紀行",
+    nav_collections: "コレクション",
+    nav_map: "香りマップ",
+    discover_travel_card: "ポストカードを見る",
+    postcard_modal_title: "香りのトラベルポストカード",
+    quick_buy: "ショッピングバッグに追加",
     item_diffuser: "リードディフューザー",
-    item_spray: "ルームフレグランススプレー",
-    item_candle: "ソイアロマキャンドル",
+    item_spray: "フレグランスルームスプレー",
+    item_candle: "プレミアムアロマキャンドル",
     footer_terms: "利用規約",
     footer_privacy: "プライバシーポリシー",
 
@@ -321,7 +361,7 @@ const i18n = {
     rec_season: "가장 여행하기 좋은 계절",
     ambient_toggle: "현지 엠비언트 소리 재생",
     ambient_toggle_active: "엠비언트 소리 음소거",
-    qr_caption: "스캔하여 시청: 이 향기가 탄생하게 된 여정",
+    qr_caption: "스캔하여 영상 시청",
     format_diffuser: "디퓨저",
     format_spray: "룸 스프레이",
     format_candle: "향초",
@@ -333,9 +373,17 @@ const i18n = {
     checkout_note: "전 세계 프리미엄 배송비는 결제 단계에서 계산됩니다.",
     back_flip_btn: "앞면으로 뒤집기",
     added_toast: "쇼핑백에 성공적으로 추가되었습니다!",
+    
+    // Chanel Upgrades
+    brand_category: "태국 향기 기행 시리즈",
+    nav_collections: "컬렉션",
+    nav_map: "센트 맵",
+    discover_travel_card: "여행 엽서 발견하기",
+    postcard_modal_title: "트래블 엽서 보기",
+    quick_buy: "쇼핑백에 추가",
     item_diffuser: "리드 디퓨저",
-    item_spray: "룸 아로마 스프레이",
-    item_candle: "소이 왁스 향초",
+    item_spray: "아로마 룸 스프레이",
+    item_candle: "소이 아로마 향초",
     footer_terms: "이용약관",
     footer_privacy: "개인정보처리방침",
 
@@ -363,7 +411,7 @@ const i18n = {
       name: "아유타야",
       tagline: "시간의 사원",
       scent_title: "Temple of Time",
-      scent_desc: "오래된 침향나무와 전통 향의 은은한 연기, 잔잔한 물가에 핀 연꽃 향의 조화로운 어우러짐. 붉은 벽돌 유적 속 시간이 멈춘 듯한 신비로운 느낌을 줍니다.",
+      scent_desc: "왓 야이 차이몽콜 사원의 고요함. 오래된 침향나무와 전통 향의 은은한 연기, 잔잔한 물가에 핀 연꽃 향의 조화로운 어우러짐.",
       temple: "왓 야이 차이몽콜 사원",
       cafe: "Tatha Cafe",
       season: "선선한 건기 (11월-2월)",
@@ -382,7 +430,7 @@ const i18n = {
     rec_season: "Meilleure Saison",
     ambient_toggle: "Activer l'ambiance sonore",
     ambient_toggle_active: "Couper le son d'ambiance",
-    qr_caption: "Scanner pour regarder : comment ce parfum a été conçu",
+    qr_caption: "Scanner pour regarder la vidéo",
     format_diffuser: "Diffuseur",
     format_spray: "Spray Intérieur",
     format_candle: "Bougie Parfumée",
@@ -394,9 +442,17 @@ const i18n = {
     checkout_note: "Frais de livraison internationale premium calculés au paiement.",
     back_flip_btn: "Retourner la carte",
     added_toast: "Ajouté avec succès à votre panier !",
+    
+    // Chanel Upgrades
+    brand_category: "LES VOYAGES OLFACTIFS DE THAÏLANDE",
+    nav_collections: "Collections",
+    nav_map: "Carte des Senteurs",
+    discover_travel_card: "Découvrir la carte postale",
+    postcard_modal_title: "CARTE POSTALE PARFUMÉE",
+    quick_buy: "Ajouter au panier bag",
     item_diffuser: "Diffuseur de parfum à tiges",
     item_spray: "Vaporisateur d'ambiance",
-    item_candle: "Bougie parfumée artisanale",
+    item_candle: "Bougie parfumée de luxe",
     footer_terms: "Conditions Générales",
     footer_privacy: "Politique de Confidentialité",
 
@@ -443,7 +499,7 @@ const i18n = {
     rec_season: "Mejor Época",
     ambient_toggle: "Reproducir sonido ambiental",
     ambient_toggle_active: "Silenciar sonido ambiental",
-    qr_caption: "Escanea para ver: cómo se diseñó este aroma",
+    qr_caption: "Escanea para ver el video",
     format_diffuser: "Difusor",
     format_spray: "Spray de Hogar",
     format_candle: "Vela Aromática",
@@ -455,9 +511,17 @@ const i18n = {
     checkout_note: "El envío internacional premium se calcula en el pago.",
     back_flip_btn: "Voltear al frente",
     added_toast: "¡Añadido con éxito a tu bolsa!",
+    
+    // Chanel Upgrades
+    brand_category: "VIAJES OLFAVORITOS DE TAILANDIA",
+    nav_collections: "Colecciones",
+    nav_map: "Mapa Olfativo",
+    discover_travel_card: "Ver Tarjeta de Scent",
+    postcard_modal_title: "TARJETA POSTAL DE VIAJE",
+    quick_buy: "Añadir a la bolsa",
     item_diffuser: "Difusor de varillas aromáticas",
-    item_spray: "Vaporizador de fragancia para hogar",
-    item_candle: "Vela perfumada artesanal",
+    item_spray: "Vaporizador aromático de hogar",
+    item_candle: "Vela aromática de lujo",
     footer_terms: "Términos y Condiciones",
     footer_privacy: "Política de Privacidad",
 
@@ -475,7 +539,7 @@ const i18n = {
       name: "Phuket",
       tagline: "Sal Marina & Coco",
       scent_title: "Sea Salt & Coconut",
-      scent_desc: "La brisa vigorizante de los vientos marinos salados combinada con el dulce aceite de coco y la crema solar templada. El recuerdo exacto de la brisa cálida antes del atardecer en el Cabo Promthep.",
+      scent_desc: "La brisa vigorizante de los vientos marinos salados combinada con el dulce aceite de coco y la crema solar templada. El recuerdo exacto de la brise de mar al atardecer en Cabo Promthep.",
       temple: "Wat Chalong",
       cafe: "Refresh Tropical Cafe",
       season: "Soleado / Seco (Nov-Abr)",
@@ -485,7 +549,7 @@ const i18n = {
       name: "Ayutthaya",
       tagline: "El Templo del Tiempo",
       scent_title: "Temple of Time",
-      scent_desc: "Una mezcla espiritual y terrosa de madera de oud antigua, incienso de templo y flores de loto floreciendo en aguas serenas. Siente el tiempo suspendido entre las ruines arqueológicas de ladrillo rojo.",
+      scent_desc: "Una mezcla espiritual y terrosa de madera de oud antigua, incienso de templo y flores de loto floreciendo en aguas serenas. Siente el tiempo suspendido entre ladrillos rojos históricos.",
       temple: "Wat Yai Chaimongkol",
       cafe: "Tatha Cafe",
       season: "Brisa Fresca (Nov-Feb)",
@@ -495,206 +559,296 @@ const i18n = {
 };
 
 // ==========================================================================
-// MOCK DATA & ACTIVE STATES
+// LUXURY PRODUCT GRID DATABASES & FALLBACKS
 // ==========================================================================
 
-let activeLang = "en";
-let activeProvince = "chiangmai";
-let activeFormat = "diffuser";
-let cart = [];
-
-const prices = {
-  diffuser: 59.00,
-  spray: 45.00,
-  candle: 49.00
+const productsData = {
+  chiangmai: [
+    { id: "cm_diffuser", type: "diffuser", price: 59.00, img: "assets/diffuser_chiangmai.png" }, // featured product image
+    { id: "cm_candle", type: "candle", price: 49.00, img: "assets/chiang_mai.png" },
+    { id: "cm_spray", type: "spray", price: 45.00, img: "assets/chiang_mai.png" }
+  ],
+  phuket: [
+    { id: "pk_diffuser", type: "diffuser", price: 59.00, img: "assets/phuket.jpg" },
+    { id: "pk_candle", type: "candle", price: 49.00, img: "assets/phuket.jpg" },
+    { id: "pk_spray", type: "spray", price: 45.00, img: "assets/spray_phuket.jpg" } // featured product image
+  ],
+  ayutthaya: [
+    { id: "ay_diffuser", type: "diffuser", price: 59.00, img: "assets/ayutthaya.jpg" },
+    { id: "ay_candle", type: "candle", price: 49.00, img: "assets/candle_ayutthaya.jpg" }, // featured product image
+    { id: "ay_spray", type: "spray", price: 45.00, img: "assets/ayutthaya.jpg" }
+  ]
 };
 
-const imageMap = {
+const imageMapPostcards = {
   chiangmai: "assets/chiang_mai.png",
   phuket: "assets/phuket.jpg",
   ayutthaya: "assets/ayutthaya.jpg"
 };
 
 // ==========================================================================
-// STATE MANAGEMENT & DOM INTERACTION
+// STATE MANAGEMENT & DOM FLOW
 // ==========================================================================
+
+let activeLang = "en";
+let activeProvince = "chiangmai";
+let cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize Lucide Icons
   lucide.createIcons();
   
-  // DOM Elements - Gatekeeper
+  // DOM selectors
   const gatekeeper = document.getElementById("gatekeeper");
   const langButtons = document.querySelectorAll(".lang-btn");
   const enterJourneyBtn = document.getElementById("enter-journey-btn");
   
-  // DOM Elements - Main App
+  // Navigation Tabs Toggles
+  const showCollectionBtn = document.getElementById("show-collection-btn");
+  const showMapBtn = document.getElementById("show-map-btn");
+  const collectionViewPanel = document.getElementById("collection-view-panel");
+  const mapViewPanel = document.getElementById("map-view-panel");
+  
+  // Province selection row
+  const provNavItems = document.querySelectorAll(".prov-nav-item");
   const mapPins = document.querySelectorAll(".map-pin");
-  const mobileProvButtons = document.querySelectorAll(".mobile-prov-btn");
+  
+  // Travel Card Modal elements
+  const openTravelCardBtn = document.getElementById("open-travel-card-btn");
+  const closeTravelCardBtn = document.getElementById("close-travel-card-btn");
+  const cardModalOverlay = document.getElementById("card-modal-overlay");
   const travelCard3d = document.getElementById("travel-card-3d");
   const flipBackTrigger = document.getElementById("flip-back-trigger");
   
-  // DOM Elements - Form & Checkout
-  const formatButtons = document.querySelectorAll(".format-btn");
-  const addToCartBtn = document.getElementById("add-to-cart-btn");
+  // Shopping Cart elements
   const cartBtn = document.getElementById("cart-btn");
   const cartCloseBtn = document.getElementById("close-cart-btn");
   const cartDrawer = document.getElementById("cart-drawer");
   const cartOverlay = document.getElementById("cart-drawer-overlay");
   
-  // DOM Elements - Media Players
+  // Media Player elements
   const simulatedMusicBtn = document.getElementById("simulated-music-play");
   const ambientAudioBtn = document.getElementById("ambient-audio-btn");
+
+  // ==================== GATEKEEPER ACTIONS ====================
   
-  // Initialize state of language in gatekeeper
   langButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       langButtons.forEach(b => b.classList.remove("selected"));
       btn.classList.add("selected");
       
       activeLang = btn.getAttribute("data-lang");
-      
-      // Update UI translations dynamically in the gatekeeper button
       enterJourneyBtn.classList.remove("disabled");
       enterJourneyBtn.disabled = false;
-      
-      const enterTextElement = enterJourneyBtn.querySelector("span");
-      enterTextElement.textContent = i18n[activeLang].enter_btn;
+      enterJourneyBtn.querySelector("span").textContent = i18n[activeLang].enter_btn;
     });
   });
   
-  // Click Enter to dismiss Gatekeeper
   enterJourneyBtn.addEventListener("click", () => {
     if (enterJourneyBtn.disabled) return;
     
-    // Apply translations across the entire page
     applyTranslations(activeLang);
-    
-    // Sync header active language displays
     updateHeaderLangDisplay(activeLang);
-    
-    // Animate Gatekeeper out
     document.body.classList.remove("gatekeeper-active");
     
-    // Auto play ambient audio logic (simulated warm introduction)
-    setTimeout(() => {
-      // Warm welcome fade in completes
-    }, 1000);
+    // Draw initial product grid
+    renderProductGrid(activeProvince);
   });
   
-  // Dropdown menu translation selectors
+  // Lang Toggle dropdown in header
   document.querySelectorAll(".lang-menu-item").forEach(item => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
       activeLang = item.getAttribute("data-lang");
       applyTranslations(activeLang);
       updateHeaderLangDisplay(activeLang);
+      renderProductGrid(activeProvince); // redraw grid for translation
     });
   });
 
-  // ==================== CARD FLIP CONTROLS ====================
+  // ==================== NAVIGATION TABS TOGGLES ====================
   
-  // Flip card when clicking card front face
-  const cardFrontFace = document.querySelector(".card-front");
-  cardFrontFace.addEventListener("click", () => {
-    travelCard3d.classList.add("flipped");
+  showCollectionBtn.addEventListener("click", () => {
+    showCollectionBtn.classList.add("active-nav");
+    showMapBtn.classList.remove("active-nav");
+    collectionViewPanel.classList.remove("hidden");
+    mapViewPanel.classList.add("hidden");
   });
   
-  // Flip card back when clicking back footer button
-  flipBackTrigger.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent re-triggering card front click
-    travelCard3d.classList.remove("flipped");
+  showMapBtn.addEventListener("click", () => {
+    showMapBtn.classList.add("active-nav");
+    showCollectionBtn.classList.remove("active-nav");
+    mapViewPanel.classList.remove("hidden");
+    collectionViewPanel.classList.add("hidden");
   });
 
-  // ==================== PROVINCE SELECTORS (MAP & MOBILE) ====================
+  // ==================== PROVINCE SELECTION (NAV BAR & MAP PINS) ====================
   
   const selectProvince = (provName) => {
     if (activeProvince === provName) return;
     
-    // Reset flip state before updating content to hide change visually
-    travelCard3d.classList.remove("flipped");
-    
-    // Stop currently playing sounds/music of old province
+    // Stop all playing audio of old province
     stopAudioStates();
     
-    setTimeout(() => {
-      activeProvince = provName;
-      
-      // Update Active Class on Map Pins
-      mapPins.forEach(pin => {
-        if (pin.getAttribute("data-province") === provName) {
-          pin.classList.add("active");
-        } else {
-          pin.classList.remove("active");
-        }
-      });
-      
-      // Update Active Class on Mobile buttons
-      mobileProvButtons.forEach(btn => {
-        if (btn.getAttribute("data-province") === provName) {
-          btn.classList.add("active");
-        } else {
-          btn.classList.remove("active");
-        }
-      });
-      
-      // Update Body Background color theme
-      document.body.className = `bg-${provName}`;
-      
-      // Update Travel Card Content
-      updateCardContent(activeLang, provName);
-      
-    }, 300); // sync with flip transition
+    // Reset travel card state inside the modal
+    travelCard3d.classList.remove("flipped");
+    
+    activeProvince = provName;
+    
+    // Update active nav items
+    provNavItems.forEach(item => {
+      if (item.getAttribute("data-province") === provName) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+    
+    // Update active map pins
+    mapPins.forEach(pin => {
+      if (pin.getAttribute("data-province") === provName) {
+        pin.classList.add("active");
+      } else {
+        pin.classList.remove("active");
+      }
+    });
+    
+    // Update body background class
+    document.body.className = `bg-${provName}`;
+    
+    // Render Scent details
+    updateActiveScentDetails(activeLang, provName);
+    
+    // Render new product list grid
+    renderProductGrid(provName);
   };
   
-  // Add listeners to map pins
+  provNavItems.forEach(item => {
+    item.addEventListener("click", () => {
+      selectProvince(item.getAttribute("data-province"));
+    });
+  });
+  
   mapPins.forEach(pin => {
     pin.addEventListener("click", () => {
       const prov = pin.getAttribute("data-province");
       selectProvince(prov);
-    });
-  });
-  
-  // Add listeners to mobile select buttons
-  mobileProvButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const prov = btn.getAttribute("data-province");
-      selectProvince(prov);
+      
+      // Auto-toggle back to collections grid view so they can see product photos immediately!
+      setTimeout(() => {
+        showCollectionBtn.click();
+      }, 500);
     });
   });
 
-  // ==================== PURCHASE CONTROLS ====================
+  // ==================== TRAVEL CARD MODAL CONTROLS ====================
   
-  formatButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      formatButtons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+  openTravelCardBtn.addEventListener("click", () => {
+    cardModalOverlay.classList.add("active");
+  });
+  
+  const closeTravelCardModal = () => {
+    cardModalOverlay.classList.remove("active");
+    travelCard3d.classList.remove("flipped");
+    stopAudioStates();
+  };
+  
+  closeTravelCardBtn.addEventListener("click", closeTravelCardModal);
+  cardModalOverlay.addEventListener("click", (e) => {
+    if (e.target === cardModalOverlay) {
+      closeTravelCardModal();
+    }
+  });
+  
+  // Card 3D Flip
+  document.querySelector(".card-front").addEventListener("click", () => {
+    travelCard3d.classList.add("flipped");
+  });
+  
+  flipBackTrigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    travelCard3d.classList.remove("flipped");
+  });
+
+  // ==================== SIMULATED SPOTIFY & AMBIENT AUDIO ====================
+  let musicInterval = null;
+  let musicPlaying = false;
+  let musicProgress = 0;
+  
+  simulatedMusicBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const widget = document.querySelector(".spotify-simulated-widget");
+    const playIcon = document.getElementById("play-icon-state");
+    const progressBar = document.getElementById("music-progress-bar");
+    
+    if (musicPlaying) {
+      musicPlaying = false;
+      widget.classList.remove("playing");
+      playIcon.setAttribute("data-lucide", "play");
+      clearInterval(musicInterval);
+    } else {
+      musicPlaying = true;
+      widget.classList.add("playing");
+      playIcon.setAttribute("data-lucide", "pause");
       
-      activeFormat = btn.getAttribute("data-format");
-      updateProductPriceAndTitle();
-    });
+      musicInterval = setInterval(() => {
+        musicProgress += 1;
+        if (musicProgress > 100) musicProgress = 0;
+        progressBar.style.width = `${musicProgress}%`;
+      }, 300);
+    }
+    lucide.createIcons();
+  });
+
+  let ambientPlaying = false;
+  
+  ambientAudioBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const audioEl = document.getElementById(`audio-${activeProvince}`);
+    const ambientIcon = document.getElementById("ambient-icon-state");
+    
+    if (ambientPlaying) {
+      audioEl.pause();
+      ambientPlaying = false;
+      ambientAudioBtn.classList.remove("active");
+      ambientIcon.setAttribute("data-lucide", "volume-x");
+      ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle;
+    } else {
+      audioEl.play().then(() => {
+        ambientPlaying = true;
+        ambientAudioBtn.classList.add("active");
+        ambientIcon.setAttribute("data-lucide", "volume-2");
+        ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle_active;
+      }).catch(err => {
+        console.log("Audio play blocked by browser policy.", err);
+      });
+    }
+    lucide.createIcons();
   });
   
-  // Add to cart action
-  addToCartBtn.addEventListener("click", () => {
-    const provinceDetails = i18n[activeLang][activeProvince];
-    const formatLabel = i18n[activeLang][`item_${activeFormat}`];
+  function stopAudioStates() {
+    const audioEl = document.getElementById(`audio-${activeProvince}`);
+    if (audioEl) {
+      audioEl.pause();
+      audioEl.currentTime = 0;
+    }
+    ambientPlaying = false;
+    ambientAudioBtn.classList.remove("active");
+    document.getElementById("ambient-icon-state").setAttribute("data-lucide", "volume-x");
+    ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle;
     
-    const cartItem = {
-      id: `${activeProvince}-${activeFormat}-${Date.now()}`,
-      provinceCode: activeProvince,
-      name: `SANÉH ${formatLabel} - ${provinceDetails.name}`,
-      format: formatLabel,
-      price: prices[activeFormat],
-      img: imageMap[activeProvince]
-    };
+    musicPlaying = false;
+    document.querySelector(".spotify-simulated-widget").classList.remove("playing");
+    document.getElementById("play-icon-state").setAttribute("data-lucide", "play");
+    document.getElementById("music-progress-bar").style.width = "0%";
+    musicProgress = 0;
+    clearInterval(musicInterval);
     
-    cart.push(cartItem);
-    updateCartUI();
-    showToastNotification(`${cartItem.name} ${i18n[activeLang].added_toast}`);
-  });
+    lucide.createIcons();
+  }
+
+  // ==================== CART DRAWER FLOW ====================
   
-  // Cart Drawer open/close
   cartBtn.addEventListener("click", () => {
     cartDrawer.classList.add("active");
     cartOverlay.classList.add("active");
@@ -707,100 +861,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
   cartCloseBtn.addEventListener("click", closeCart);
   cartOverlay.addEventListener("click", closeCart);
-
-  // ==================== SIMULATED SPOTIFY PLAYER ====================
-  let musicInterval = null;
-  let musicPlaying = false;
-  let musicProgress = 0;
-  
-  simulatedMusicBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent card flip
-    const widget = document.querySelector(".spotify-simulated-widget");
-    const playIcon = document.getElementById("play-icon-state");
-    const progressBar = document.getElementById("music-progress-bar");
-    
-    if (musicPlaying) {
-      // Pause
-      musicPlaying = false;
-      widget.classList.remove("playing");
-      playIcon.setAttribute("data-lucide", "play");
-      clearInterval(musicInterval);
-    } else {
-      // Play
-      musicPlaying = true;
-      widget.classList.add("playing");
-      playIcon.setAttribute("data-lucide", "pause");
-      
-      musicInterval = setInterval(() => {
-        musicProgress += 1;
-        if (musicProgress > 100) {
-          musicProgress = 0;
-        }
-        progressBar.style.width = `${musicProgress}%`;
-      }, 300);
-    }
-    lucide.createIcons(); // refresh pause/play icon state in UI
-  });
-
-  // ==================== REAL AMBIENT AUDIO PLAYER ====================
-  let ambientPlaying = false;
-  
-  ambientAudioBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent card flip
-    const audioEl = document.getElementById(`audio-${activeProvince}`);
-    const ambientIcon = document.getElementById("ambient-icon-state");
-    
-    if (ambientPlaying) {
-      // Stop
-      audioEl.pause();
-      ambientPlaying = false;
-      ambientAudioBtn.classList.remove("active");
-      ambientIcon.setAttribute("data-lucide", "volume-x");
-      ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle;
-    } else {
-      // Play
-      audioEl.play().then(() => {
-        ambientPlaying = true;
-        ambientAudioBtn.classList.add("active");
-        ambientIcon.setAttribute("data-lucide", "volume-2");
-        ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle_active;
-      }).catch(err => {
-        console.log("Audio play blocked by browser policy. User gesture required.", err);
-      });
-    }
-    lucide.createIcons();
-  });
-  
-  function stopAudioStates() {
-    // stop ambient
-    const audioEl = document.getElementById(`audio-${activeProvince}`);
-    if (audioEl) {
-      audioEl.pause();
-      audioEl.currentTime = 0;
-    }
-    ambientPlaying = false;
-    ambientAudioBtn.classList.remove("active");
-    document.getElementById("ambient-icon-state").setAttribute("data-lucide", "volume-x");
-    ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle;
-    
-    // stop simulated spotify
-    musicPlaying = false;
-    document.querySelector(".spotify-simulated-widget").classList.remove("playing");
-    document.getElementById("play-icon-state").setAttribute("data-lucide", "play");
-    document.getElementById("music-progress-bar").style.width = "0%";
-    musicProgress = 0;
-    clearInterval(musicInterval);
-    
-    lucide.createIcons();
-  }
 });
 
 // ==========================================================================
-// TRANSLATION ENGINE & DATA RENDERING
+// TRANSLATION & DYNAMIC GRID RENDERING ENGINE
 // ==========================================================================
 
 function applyTranslations(lang) {
-  // Set html directory context for Right-To-Left reading support
   if (lang === "ar") {
     document.documentElement.setAttribute("dir", "rtl");
     document.documentElement.lang = "ar";
@@ -817,13 +884,7 @@ function applyTranslations(lang) {
     }
   });
   
-  // Update Active Scent Content
-  updateCardContent(lang, activeProvince);
-  
-  // Update Product Section
-  updateProductPriceAndTitle();
-  
-  // Update Cart details language
+  updateActiveScentDetails(lang, activeProvince);
   updateCartUI();
 }
 
@@ -834,39 +895,87 @@ function updateHeaderLangDisplay(lang) {
   }
 }
 
-function updateCardContent(lang, province) {
+function updateActiveScentDetails(lang, province) {
   const tData = i18n[lang][province];
   
-  // Front of Card
+  // Upper Banner Content
+  document.getElementById("banner-scent-title").textContent = tData.scent_title;
+  document.getElementById("banner-scent-desc").textContent = tData.scent_desc;
+  
+  // Travel Postcard Modal Front
   document.getElementById("card-front-title").textContent = tData.name;
   document.getElementById("card-front-tagline").textContent = `"${tData.tagline}"`;
-  document.getElementById("card-front-img").src = imageMap[province];
+  document.getElementById("card-front-img").src = imageMapPostcards[province];
   document.getElementById("card-front-img").alt = tData.name;
   
-  // Back of Card Scent Details
+  // Travel Postcard Modal Back Scent
   document.getElementById("card-back-scent-title").textContent = tData.scent_title;
   document.getElementById("card-back-scent-desc").textContent = tData.scent_desc;
   
-  // Back of Card Locals
+  // Travel Postcard Locals
   document.getElementById("rec-temple-name").textContent = tData.temple;
   document.getElementById("rec-cafe-name").textContent = tData.cafe;
   document.getElementById("rec-season-val").textContent = tData.season;
   
-  // Playlist Details
+  // Playlist
   document.getElementById("music-title").textContent = tData.music;
 }
 
-function updateProductPriceAndTitle() {
-  const provDetails = i18n[activeLang][activeProvince];
-  const formatLabel = i18n[activeLang][`item_${activeFormat}`];
+// Render dynamic Chanel-Style Product Grid cards
+function renderProductGrid(province) {
+  const gridContainer = document.getElementById("product-grid-container");
+  gridContainer.innerHTML = "";
   
-  document.getElementById("purchase-product-name").textContent = `SANÉH ${formatLabel} - ${provDetails.name}`;
-  document.getElementById("purchase-product-price").textContent = `$${prices[activeFormat].toFixed(2)}`;
+  const products = productsData[province];
+  const tData = i18n[activeLang][province];
+  
+  products.forEach(prod => {
+    const formatLabel = i18n[activeLang][`item_${prod.type}`];
+    const buyButtonLabel = i18n[activeLang].quick_buy;
+    
+    const cardEl = document.createElement("div");
+    cardEl.className = "product-card";
+    cardEl.innerHTML = `
+      <div class="product-image-wrapper">
+        <img src="${prod.img}" class="product-img-primary" alt="${formatLabel} - ${tData.name}">
+        <button class="quick-add-overlay-btn" onclick="addProductToCart('${province}', '${prod.type}', ${prod.price}, '${prod.img}')">
+          <i data-lucide="shopping-bag" class="icon-sm"></i>
+          <span>${buyButtonLabel}</span>
+        </button>
+      </div>
+      <div class="product-meta">
+        <span class="product-brand-sub">S A N É H</span>
+        <h4 class="product-grid-name">${formatLabel} — ${tData.name}</h4>
+        <p class="product-grid-scent">${tData.tagline}</p>
+        <span class="product-grid-price">$${prod.price.toFixed(2)}</span>
+      </div>
+    `;
+    gridContainer.appendChild(cardEl);
+  });
+  
+  lucide.createIcons(); // refresh icons inside grids
 }
 
 // ==========================================================================
-// SIMULATED E-COMMERCE LOGIC
+// E-COMMERCE SHOPPING BAG LOGIC
 // ==========================================================================
+
+window.addProductToCart = (province, formatType, price, imagePath) => {
+  const provinceDetails = i18n[activeLang][province];
+  const formatLabel = i18n[activeLang][`item_${formatType}`];
+  
+  const cartItem = {
+    id: `${province}-${formatType}-${Date.now()}`,
+    name: `SANÉH ${formatLabel} — ${provinceDetails.name}`,
+    format: formatLabel,
+    price: price,
+    img: imagePath
+  };
+  
+  cart.push(cartItem);
+  updateCartUI();
+  showToastNotification(`${cartItem.name} ${i18n[activeLang].added_toast}`);
+};
 
 function updateCartUI() {
   const container = document.getElementById("cart-items-container");
@@ -874,7 +983,6 @@ function updateCartUI() {
   const subtotalEl = document.getElementById("cart-subtotal-val");
   const checkoutBtn = document.getElementById("checkout-btn");
   
-  // Update badge count
   countBadge.textContent = cart.length;
   
   if (cart.length === 0) {
@@ -884,7 +992,6 @@ function updateCartUI() {
     return;
   }
   
-  // Populate items
   container.innerHTML = "";
   let subtotal = 0;
   
@@ -910,19 +1017,13 @@ function updateCartUI() {
   subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
   checkoutBtn.disabled = false;
   
-  // Refresh Lucide Trash icons
   lucide.createIcons();
 }
 
-// Exposed globally for onclick handler in string templates
 window.removeFromCart = (id) => {
   cart = cart.filter(item => item.id !== id);
   updateCartUI();
 };
-
-// ==========================================================================
-// TOAST NOTIFICATIONS
-// ==========================================================================
 
 function showToastNotification(message) {
   const toast = document.getElementById("toast-notification");
