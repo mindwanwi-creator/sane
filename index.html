@@ -113,6 +113,11 @@
           </div>
         </div>
         
+        <!-- Admin Dashboard Portal -->
+        <button class="cart-trigger-btn" id="admin-toggle-btn" title="Admin Portal">
+          <i data-lucide="sliders-horizontal" class="icon-sm"></i>
+        </button>
+        
         <!-- Cart -->
         <button class="cart-trigger-btn" id="cart-btn">
           <i data-lucide="shopping-bag" class="icon-sm"></i>
@@ -126,15 +131,20 @@
       
       <!-- HERO STORY SECTION (Chanel Slogan Style) -->
       <section class="hero-story-section">
-        <span class="hero-category-label" data-i18n="brand_category">LES VOYA GES OLFACTIFS</span>
+        <span class="hero-category-label" data-i18n="brand_category">LES VOYAGES OLFACTIFS</span>
         <h2 class="section-title" data-i18n="slogan_title">Not selling perfume, but selling the memory of a place.</h2>
       </section>
 
-      <!-- PROVINCE CAROUSEL SELECTOR -->
-      <div class="province-navbar">
-        <button class="prov-nav-item active" data-province="chiangmai">CHIANG MAI</button>
-        <button class="prov-nav-item" data-province="phuket">PHUKET</button>
-        <button class="prov-nav-item" data-province="ayutthaya">AYUTTHAYA</button>
+      <!-- DUAL-LEVEL COLLECTION & SCENT SELECTORS -->
+      <div class="collection-navbar">
+        <button class="coll-nav-item active" data-collection="origins" data-i18n="coll_origins">Origins of Thailand</button>
+        <button class="coll-nav-item" data-collection="northern" data-i18n="coll_northern">Northern Tales</button>
+        <button class="coll-nav-item" data-collection="island" data-i18n="coll_island">Island Stories</button>
+        <button class="coll-nav-item" data-collection="royal" data-i18n="coll_royal">Royal Heritage</button>
+      </div>
+      
+      <div class="scent-navbar" id="scent-nav-container">
+        <!-- Dynamically injected sub-scents -->
       </div>
 
       <!-- MAIN CONTAINER: toggles between Grid and Map view -->
@@ -458,6 +468,121 @@
           <p class="success-desc" data-i18n="success_desc">A piece of Thailand is being bottled and prepared for shipment. A confirmation email with tracking details will be sent shortly.</p>
           <button class="continue-shopping-btn" id="success-close-btn" data-i18n="continue_shopping">Continue Shopping</button>
         </div>
+      </div>
+
+    </div>
+
+    <!-- ADMIN CONSOLE DRAWER -->
+    <div class="admin-drawer-overlay" id="admin-drawer-overlay"></div>
+    <div class="admin-drawer" id="admin-drawer">
+      
+      <!-- VIEW 1: PRODUCT LISTING -->
+      <div class="admin-drawer-view active-view" id="admin-view-list">
+        <div class="cart-header">
+          <h3 data-i18n="admin_title">Product Manager</h3>
+          <button class="close-cart-btn" id="close-admin-btn">
+            <i data-lucide="x" class="icon-sm"></i>
+          </button>
+        </div>
+        
+        <div class="admin-body">
+          <p class="admin-helper-text" data-i18n="admin_helper">Select a product to update its luxury photography and metadata details.</p>
+          
+          <div class="admin-reset-container">
+            <button class="admin-reset-btn" id="admin-reset-catalog-btn" data-i18n="admin_reset_btn">Reset to Default Catalog</button>
+          </div>
+
+          <div class="admin-product-table-wrapper">
+            <table class="admin-product-table">
+              <thead>
+                <tr>
+                  <th data-i18n="admin_col_img">Image</th>
+                  <th data-i18n="admin_col_name">Product</th>
+                  <th data-i18n="admin_col_action">Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-product-list-body">
+                <!-- Injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: PRODUCT EDIT FORM -->
+      <div class="admin-drawer-view hidden-view" id="admin-view-edit">
+        <div class="cart-header">
+          <h3 data-i18n="admin_edit_title">Edit Product</h3>
+          <button class="close-cart-btn" id="admin-edit-back-btn">
+            <i data-lucide="arrow-left" class="icon-sm"></i>
+          </button>
+        </div>
+        
+        <form class="checkout-form" id="admin-product-edit-form">
+          <div class="form-scroll-container">
+            
+            <input type="hidden" id="edit-prod-id">
+            
+            <h4 class="form-section-title" data-i18n="admin_sec_branding">Product Details</h4>
+            
+            <div class="form-group">
+              <label for="edit-prod-name-display" data-i18n="admin_field_pname">Product Name (Display)</label>
+              <input type="text" id="edit-prod-name-display" disabled class="disabled-input">
+            </div>
+
+            <div class="form-group">
+              <label for="edit-prod-price" data-i18n="admin_field_price">Price ($ USD)</label>
+              <input type="number" id="edit-prod-price" required step="0.01" min="1" placeholder="59.00">
+            </div>
+
+            <h4 class="form-section-title" data-i18n="admin_sec_imagery">Luxury Imagery</h4>
+            <div class="admin-image-upload-zone">
+              <div class="preview-frame">
+                <img src="" id="edit-prod-image-preview" alt="Preview">
+              </div>
+              <div class="upload-controls">
+                <label class="custom-file-upload">
+                  <input type="file" id="edit-prod-image-file" accept="image/*">
+                  <i data-lucide="upload" class="icon-xs"></i>
+                  <span data-i18n="admin_choose_file">Choose Photo</span>
+                </label>
+                <p class="upload-tip" data-i18n="admin_upload_tip">PNG or JPG. Recommended aspect ratio 1:1.2</p>
+              </div>
+            </div>
+
+            <h4 class="form-section-title" data-i18n="admin_sec_scent">Scent Journey Metadata</h4>
+            <div class="form-group">
+              <label for="edit-scent-tagline" data-i18n="admin_field_tagline">Scent Tagline</label>
+              <input type="text" id="edit-scent-tagline" required placeholder="Rain after Tea">
+            </div>
+            
+            <div class="form-group">
+              <label for="edit-scent-desc" data-i18n="admin_field_desc">Scent Description</label>
+              <textarea id="edit-scent-desc" required rows="3" placeholder="Scent details..."></textarea>
+            </div>
+
+            <h4 class="form-section-title" data-i18n="admin_sec_recommendations">Local Recommendations</h4>
+            <div class="form-group">
+              <label for="edit-rec-temple" data-i18n="rec_temple">Recommended Temple</label>
+              <input type="text" id="edit-rec-temple" required>
+            </div>
+            <div class="form-group">
+              <label for="edit-rec-cafe" data-i18n="rec_cafe">Recommended Cafe</label>
+              <input type="text" id="edit-rec-cafe" required>
+            </div>
+            <div class="form-group">
+              <label for="edit-rec-season" data-i18n="rec_season">Best Season</label>
+              <input type="text" id="edit-rec-season" required>
+            </div>
+
+          </div>
+
+          <div class="cart-footer">
+            <button type="submit" class="checkout-btn" id="admin-save-product-btn">
+              <span data-i18n="admin_save_changes">Save Changes</span>
+            </button>
+          </div>
+        </form>
       </div>
 
     </div>

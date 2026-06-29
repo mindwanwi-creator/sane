@@ -1,8 +1,8 @@
 // ==========================================================================
-// TRANSLATION DICTIONARIES (8 LANGUAGES - CHANEL LUXURY & CHECKOUT UPGRADE)
+// TRANSLATION DICTIONARIES (8 LANGUAGES - CHANEL LUXURY & ADMIN UPGRADE)
 // ==========================================================================
 
-const i18n = {
+const defaultI18n = {
   en: {
     enter_btn: "Enter the Fragrance Journey",
     slogan_title: "Not selling perfume, but selling the memory of a place.",
@@ -70,39 +70,115 @@ const i18n = {
     footer_shipping_title: "SHIPPING & DELIVERY",
     footer_shipping_desc: "Complimentary standard worldwide shipping on orders over $150. Curated deliveries dispatched via DHL Express & FedEx from Bangkok.",
     footer_contact_title: "CONTACT US",
+
+    // Collection Names
+    coll_origins: "Origins of Thailand",
+    coll_northern: "Northern Tales",
+    coll_island: "Island Stories",
+    coll_royal: "Royal Heritage",
+
+    // Admin Panel Translations
+    admin_title: "Product Manager",
+    admin_helper: "Select a product to update its luxury photography and metadata details.",
+    admin_reset_btn: "Reset to Default Catalog",
+    admin_col_img: "Image",
+    admin_col_name: "Product",
+    admin_col_action: "Action",
+    admin_edit_title: "Edit Product",
+    admin_sec_branding: "Product Details",
+    admin_field_pname: "Product Name (Display)",
+    admin_field_price: "Price ($ USD)",
+    admin_sec_imagery: "Luxury Imagery",
+    admin_choose_file: "Choose Photo",
+    admin_upload_tip: "PNG or JPG. Recommended aspect ratio 1:1.2",
+    admin_sec_scent: "Scent Journey Metadata",
+    admin_field_tagline: "Scent Tagline",
+    admin_field_desc: "Scent Description",
+    admin_sec_recommendations: "Local Recommendations",
+    admin_save_changes: "Save Changes",
     
-    // Scent data translations
+    // --- SCENT DATABASE (ENGLISH) ---
+    // 1. Origins of Thailand
+    rain_on_earth: {
+      name: "Rain on Earth", tagline: "Earthy ozone & petrichor",
+      scent_title: "Rain on Earth", scent_desc: "Capturing the therapeutic aroma of dry summer soil accepting the first drops of monsoon rain. Rich notes of petrichor, moss, and warm ozone.",
+      temple: "Wat Saket (Golden Mount)", cafe: "Earthy Brews Bangkok", season: "First Rain (May-Jun)", music: "Bangkok Rain Lofi"
+    },
+    siam_jasmine: {
+      name: "Siam Jasmine", tagline: "Sweet royal grandiflorum",
+      scent_title: "Siam Jasmine", scent_desc: "An opulent fragrance of freshly picked jasmine buds blooming under warm tropical moonlight. Traditionally styled, comforting, and deeply elegant.",
+      temple: "Wat Phra Kaew", cafe: "Floral Cafe at Napasorn", season: "Summer (Mar-May)", music: "Siam Royal Harp"
+    },
+    thai_rice: {
+      name: "Thai Rice", tagline: "Steamed jasmine rice & pandan",
+      scent_title: "Thai Rice", scent_desc: "A warm, comforting scent of freshly steamed Thai Jasmine Rice infused with crushed pandan leaves. Subtle, sweet, and uniquely inviting.",
+      temple: "Wat Arun", cafe: "Pandan & Rice Lab", season: "Harvest Season (Nov-Jan)", music: "Siam Acoustic Guitar"
+    },
+    temple_incense: {
+      name: "Temple Incense", tagline: "Sandalwood & temple smoke",
+      scent_title: "Temple Incense", scent_desc: "A sacred blend of burning sandalwood, aged agarwood, and temple flower offerings. Evokes quiet contemplation and spiritual stillness.",
+      temple: "Wat Pho", cafe: "Peace Oriental Teahouse", season: "Cool Season (Nov-Feb)", music: "Buddhist Chants Ambient"
+    },
+    // 2. Northern Tales
     chiangmai: {
-      name: "Chiang Mai",
-      tagline: "Rain after Tea",
-      scent_title: "Rain after Tea",
-      scent_desc: "The fresh aroma of rain droplets falling onto lush green tea leaves on the misty highlands of Chiang Mai. Capturing the feeling of a calm morning walk near Wat Doi Suthep.",
-      temple: "Wat Phra That Doi Suthep",
-      cafe: "Gokotta Tea Shokudo",
-      season: "Monsoon / Rainy (Jul-Oct)",
-      music: "Northern Mist Lofi"
+      name: "Chiang Mai", tagline: "Rain after Tea",
+      scent_title: "Rain after Tea", scent_desc: "The fresh aroma of rain droplets falling onto lush green tea leaves on the misty highlands of Chiang Mai. Capturing the feeling of a calm morning walk near Wat Doi Suthep.",
+      temple: "Wat Phra That Doi Suthep", cafe: "Gokotta Tea Shokudo", season: "Monsoon / Rainy (Jul-Oct)", music: "Northern Mist Lofi"
     },
+    nan: {
+      name: "Nan", tagline: "Nan Forest Whisper",
+      scent_title: "Nan Forest Whisper", scent_desc: "The crisp, woody aroma of ancient pine trees and wild ferns damp with morning dew. Bring the peaceful serenity of Nan's valleys into your room.",
+      temple: "Wat Phumin", cafe: "Nan Valleys Coffee", season: "Winter Mist (Dec-Jan)", music: "Nan Valley Acoustic"
+    },
+    chiangrai: {
+      name: "Chiang Rai", tagline: "Highland Oolong",
+      scent_title: "Highland Oolong", scent_desc: "Roasted tea leaves, green orchid petals, and cool mountain air. Reminiscent of a sunrise look-out over the golden triangle mountain ranges.",
+      temple: "Wat Rong Khun (White Temple)", cafe: "Choui Fong Tea Cafe", season: "Cool Winds (Nov-Jan)", music: "Highland Flute"
+    },
+    maehongson: {
+      name: "Mae Hong Son", tagline: "Mist of Three Seasons",
+      scent_title: "Mist of Three Seasons", scent_desc: "Fresh pine needles, wet moss, eucalyptus, and misty mountain pine forests. Highly therapeutic, cooling, and crisp.",
+      temple: "Wat Phra That Doi Kong Mu", cafe: "Coffee in Love Pai", season: "Mist Season (Oct-Feb)", music: "Pai Acoustic Sunset"
+    },
+    // 3. Island Stories
     phuket: {
-      name: "Phuket",
-      tagline: "Sea Salt & Coconut",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "The bracing touch of sea salt winds meeting warm sweet coconut oil and light sun cream. Capturing the precise memory of a warm ocean breeze just before sunset at Promthep Cape.",
-      temple: "Wat Chalong (Chaithararam)",
-      cafe: "Refresh Tropical Cafe",
-      season: "Sunny / Dry (Nov-Apr)",
-      music: "Andaman Sunset Chill"
+      name: "Phuket", tagline: "Sea Salt & Coconut",
+      scent_title: "Sea Salt & Coconut", scent_desc: "The bracing touch of sea salt winds meeting warm sweet coconut oil and light sun cream. Capturing the precise memory of a warm ocean breeze just before sunset at Promthep Cape.",
+      temple: "Wat Chalong (Chaithararam)", cafe: "Refresh Tropical Cafe", season: "Sunny / Dry (Nov-Apr)", music: "Andaman Sunset Chill"
     },
+    krabi: {
+      name: "Krabi", tagline: "Emerald Caves",
+      scent_title: "Emerald Caves", scent_desc: "Salty aquatic ocean waves colliding with damp limestone cave walls, wild ginger, and tropical shoreline flora. Fresh, mineral, and adventurous.",
+      temple: "Wat Tham Suea (Tiger Cave)", cafe: "Hub Cafe Krabi", season: "Ocean Winds (Dec-Mar)", music: "Emerald Bay Waves"
+    },
+    samui: {
+      name: "Samui", tagline: "Coconut Grove",
+      scent_title: "Coconut Grove", scent_desc: "Sweet toasted coconut, coconut milk, absolute vanilla, and fragrant yellow frangipani blossoms. A warm, gourmand tropical paradise scent.",
+      temple: "Wat Plai Laem", cafe: "Coco Tam's", season: "Sunny Season (Feb-Jun)", music: "Island Reggae Chill"
+    },
+    similan: {
+      name: "Similan", tagline: "Turquoise Sea",
+      scent_title: "Turquoise Sea", scent_desc: "Bright ozonic notes, lime peel, drift wood, and clear white amber. Capturing the crisp feeling of diving into crystal clear tropical ocean waters.",
+      temple: "Wat Suwan Kuha", cafe: "Sea Glass Cafe", season: "Sailing Season (Nov-May)", music: "Deep Blue Ambient"
+    },
+    // 4. Royal Heritage
     ayutthaya: {
-      name: "Ayutthaya",
-      tagline: "Temple of Time",
-      scent_title: "Temple of Time",
-      scent_desc: "A spiritual and grounding blend of ancient agarwood, temple incense smoke, and lotus blossoms blooming in quiet waters. Capturing the feeling of frozen time among red-brick ruins.",
-      temple: "Wat Yai Chaimongkol",
-      cafe: "Tatha Cafe",
-      season: "Cool Breeze (Nov-Feb)",
-      music: "Siam Ancient Chimes"
+      name: "Ayutthaya", tagline: "Temple of Time",
+      scent_title: "Temple of Time", scent_desc: "A spiritual and grounding blend of ancient agarwood, temple incense smoke, and lotus blossoms blooming in quiet waters. Capturing the feeling of frozen time among red-brick ruins.",
+      temple: "Wat Yai Chaimongkol", cafe: "Tatha Cafe", season: "Cool Breeze (Nov-Feb)", music: "Siam Ancient Chimes"
+    },
+    bangkok: {
+      name: "Bangkok", tagline: "Midnight Jasmine",
+      scent_title: "Midnight Jasmine", scent_desc: "Night-blooming jasmine grandiflorum, rich patchouli, and warm golden amber. Capturing the electric, mysterious nights of old Bangkok.",
+      temple: "Wat Saket", cafe: "Chata Specialty Coffee", season: "Cool Nights (Nov-Jan)", music: "Bangkok Jazz Lofi"
+    },
+    sukhothai: {
+      name: "Sukhothai", tagline: "Dawn of Happiness",
+      scent_title: "Dawn of Happiness", scent_desc: "Pink sacred lotus flowers, ancient stone pond water, and a touch of light golden musk. Deeply peaceful and historic.",
+      temple: "Wat Mahathat", cafe: "Sukhothai Heritage Cafe", season: "Loi Krathong (Nov)", music: "Siam Traditional Ranat"
     }
   },
+  
   th: {
     enter_btn: "เข้าสู่การเดินทางแห่งกลิ่นหอม",
     slogan_title: "ไม่ได้ขายน้ำหอม แต่ขายความทรงจำของสถานที่",
@@ -171,667 +247,253 @@ const i18n = {
     footer_shipping_desc: "จัดส่งมาตรฐานฟรีทั่วโลกเมื่อยอดสั่งซื้อเกิน $150 คัดสรรบริการและส่งตรงผ่าน DHL Express และ FedEx จากกรุงเทพฯ",
     footer_contact_title: "ช่องทางการติดต่อ",
 
-    chiangmai: {
-      name: "เชียงใหม่",
-      tagline: "สายฝนหลังไร่ชา",
-      scent_title: "Rain after Tea",
-      scent_desc: "กลิ่นหอมสดชื่นของหยดน้ำค้างและฝนแรกฤดูที่ตกลงบนยอดใบชาเขียวชอุ่ม ณ ขุนเขาเชียงใหม่ที่เคล้าไอหมอก ให้ความรู้สึกเหมือนเช้าวันใหม่ใกล้ดอยสุเทพ",
-      temple: "วัดพระธาตุดอยสุเทพ",
-      cafe: "Gokotta Tea Shokudo",
-      season: "ฤดูฝนและหมอก (ก.ค. - ต.ค.)",
-      music: "Northern Mist Lofi"
-    },
-    phuket: {
-      name: "ภูเก็ต",
-      tagline: "เกลือทะเลและมะพร้าวหอม",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "กลิ่นอายลมทะเลชื่นใจผสานความหวานละมุนจากน้ำมันมะพร้าวและครีมกันแดดอุ่น ๆ ชวนให้นึกถึงช่วงเวลาทองก่อนพระอาทิตย์ลับขอบฟ้าที่แหลมพรหมเทพ",
-      temple: "วัดฉลอง (วัดไชยธาราราม)",
-      cafe: "Refresh Tropical Cafe",
-      season: "ฤดูร้อนและแดดใส (พ.ย. - เม.ย.)",
-      music: "Andaman Sunset Chill"
-    },
-    ayutthaya: {
-      name: "อยุธยา",
-      tagline: "วิหารแห่งกาลเวลา",
-      scent_title: "Temple of Time",
-      scent_desc: "ความเงียบสงบที่ประณีตด้วยกลิ่นกฤษณาควันกำยานวัดโบราณ และดอกบัวบานสะพรั่งเหนือน้ำใส ให้ความรู้สึกเหมือนเวลารอบกายหยุดนิ่งท่ามกลางโบราณสถานอิฐแดง",
-      temple: "วัดใหญ่ชัยมงคล",
-      cafe: "ทาทา คาเฟ่ (Tatha Cafe)",
-      season: "ฤดูหนาวรับลมเย็น (พ.ย. - ก.พ.)",
-      music: "Siam Ancient Chimes"
-    }
-  },
-  zh: {
-    enter_btn: "开启寻香之旅",
-    slogan_title: "我们不卖香水，我们卖的是地方的记忆。",
-    slogan_desc: "每一瓶都是奢华的香氛旅程。把泰国的灵魂与记忆带回家。",
-    map_instruction: "选择省份探索专属香气",
-    postcard_label: "旅行明信片",
-    flip_prompt: "点击卡片翻转并阅读故事",
-    rec_temple: "推荐寺庙",
-    rec_cafe: "推荐特色咖啡馆",
-    rec_season: "最佳旅游季节",
-    ambient_toggle: "播放环境白噪音",
-    ambient_toggle_active: "静音环境音效",
-    qr_caption: "扫码观看视频",
-    format_diffuser: "无火香薰",
-    format_spray: "空间喷雾",
-    format_candle: "香薰蜡烛",
-    add_to_cart: "将香气加入购物车",
-    cart_title: "您的香氛购物袋",
-    empty_cart: "您的购物袋目前是空的。",
-    subtotal: "小计",
-    checkout: "安全结账",
-    checkout_note: "全球优质快递费用将在结账时计算。",
-    back_flip_btn: "翻转至正面",
-    added_toast: "已成功添加到您的购物袋！",
-    
-    // Chanel Upgrades
-    brand_category: "香氛旅行系列",
-    nav_collections: "甄选系列",
-    nav_map: "寻香地图",
-    discover_travel_card: "探索旅行明信片",
-    postcard_modal_title: "专属旅行明信片",
-    quick_buy: "加入购物袋",
-    item_diffuser: "藤条无火香薰",
-    item_spray: "空间香氛喷雾",
-    item_candle: "手工香薰蜡烛",
-    footer_terms: "条款与条件",
-    footer_privacy: "隐私政策",
-    
-    // Checkout Upgrades
-    checkout_header: "配送详情",
-    contact_info_title: "联系信息",
-    shipping_address_title: "送货地址",
-    field_email: "电子邮件",
-    field_phone: "电话号码",
-    field_firstname: "名字",
-    field_lastname: "姓氏",
-    field_address: "街道地址",
-    field_city: "城市/省份",
-    field_postal: "邮政编码",
-    field_country: "国家/地区",
-    shipping_method_title: "配送方式",
-    ship_std_name: "全球标准配送",
-    ship_std_time: "7 - 14 个工作日",
-    ship_free: "免费",
-    ship_exp_name: "DHL 奢华特快专递",
-    ship_exp_time: "2 - 4 个工作日",
-    payment_title: "支付方式",
-    payment_sim_note: "安全支付模拟（支持信用卡、Apple Pay及PayPal）",
-    total_to_pay: "总计金额",
-    place_order: "提交香氛订单",
-    success_title: "感谢您的购买",
-    success_subtitle: "您的 SANÉH 香氛之旅已开启",
-    success_desc: "泰国的记忆已为您精细装瓶，并正在进行发货准备。您的确认邮件与物流单号将很快发送给您。",
-    continue_shopping: "继续购物",
-    footer_shipping_title: "配送与交付",
-    footer_shipping_desc: "订单金额满 150 美元即可享受全球免费标准配送。所有包件均从曼谷通过 DHL Express 或 FedEx 精心发运。",
-    footer_contact_title: "联系我们",
+    // Collection Names
+    coll_origins: "กลิ่นต้นกำเนิดไทย",
+    coll_northern: "ตำนานภาคเหนือ",
+    coll_island: "เรื่องราวแห่งเกาะใต้",
+    coll_royal: "มรดกราชธานี",
 
-    chiangmai: {
-      name: "清迈",
-      tagline: "茶后细雨",
-      scent_title: "Rain after Tea",
-      scent_desc: "清晨的细雨落在清迈云雾缭绕的高山茶园中，散发出绿茶与湿润泥土的清新香气。唤醒您在素贴山下漫步的宁静清晨。",
-      temple: "双龙寺 (Wat Doi Suthep)",
-      cafe: "Gokotta Tea Shokudo",
-      season: "雨季与晨雾 (7月至10月)",
-      music: "清迈晨雾 Lofi"
-    },
-    phuket: {
-      name: "普吉岛",
-      tagline: "海盐与椰香",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "海盐微风与甜美椰子油和防晒霜的温暖香气交织在一起。重温神仙半岛黄昏日落前海风拂面的金色记忆。",
-      temple: "查龙寺 (Wat Chalong)",
-      cafe: "Refresh Tropical Cafe",
-      season: "旱季晴天 (11月至次年4月)",
-      music: "安达曼落日轻音乐"
-    },
-    ayutthaya: {
-      name: "大城府",
-      tagline: "时光神殿",
-      scent_title: "Temple of Time",
-      scent_desc: "古老沉香木、寺庙线香与静水中绽放的荷花香气相融合，庄严而宁静。仿佛在大城府红砖遗迹中感受时光倒流。",
-      temple: "崖差蒙空寺 (Wat Yai)",
-      cafe: "Tatha Cafe",
-      season: "凉爽季 (11月至2月)",
-      music: "暹罗古钟古乐"
-    }
-  },
-  ar: {
-    enter_btn: "دخول رحلة العطور",
-    slogan_title: "لا نبيع العطور، بل نبيع ذكريات الأماكن.",
-    slogan_desc: "كل زجاجة هي رحلة عطرية فاخرة. خذ جوهر تايلاند وذكرياتها معك إلى المنزل.",
-    map_instruction: "اختر مقاطعة لاستكشاف عطرها الخاص",
-    postcard_label: "بطاقة السفر",
-    flip_prompt: "انقر فوق البطاقة لقراءة القصة",
-    rec_temple: "المعبد الموصى به",
-    rec_cafe: "المقهى الموصى به",
-    rec_season: "أفضل موسم للزيارة",
-    ambient_toggle: "تشغيل الصوت المحيطي للمكان",
-    ambient_toggle_active: "كتم الصوت المحيطي",
-    qr_caption: "امسح الرمز لمشاهدة الفيديو",
-    format_diffuser: "عطر القصب",
-    format_spray: "رذاذ الغرفة",
-    format_candle: "شمعة معطرة",
-    add_to_cart: "إضافة العطر إلى السلة",
-    cart_title: "حقيبة العطور الخاصة بك",
-    empty_cart: "حقيبتك فارغة حالياً.",
-    subtotal: "المجموع الفرعي",
-    checkout: "دفع آمن",
-    checkout_note: "يتم حساب تكاليف الشحن الدولي الفاخر عند الدفع.",
-    back_flip_btn: "اقلب إلى الأمام",
-    added_toast: "تمت الإضافة إلى حقيبة العطور بنجاح!",
-    
-    // Chanel Upgrades
-    brand_category: "رحلات العطور التايلاندية",
-    nav_collections: "المجموعات",
-    nav_map: "خريطة العطور",
-    discover_travel_card: "اكتشف بطاقة بريد العطور",
-    postcard_modal_title: "بطاقة السفر البريدية",
-    quick_buy: "أضف إلى الحقيبة",
-    item_diffuser: "موزع عطور القصب",
-    item_spray: "رذاذ الغرفة المنعش",
-    item_candle: "شمعة معطرة فاخرة",
-    footer_terms: "الشروط والأحكام",
-    footer_privacy: "سياسة الخصوصية",
-    
-    // Checkout Upgrades
-    checkout_header: "تفاصيل الشحن",
-    contact_info_title: "معلومات الاتصال",
-    shipping_address_title: "عنوان التسليم",
-    field_email: "البريد الإلكتروني",
-    field_phone: "رقم الهاتف",
-    field_firstname: "الاسم الأول",
-    field_lastname: "اسم العائلة",
-    field_address: "عنوان الشارع",
-    field_city: "المدينة / المحافظة",
-    field_postal: "الرمز البريدي",
-    field_country: "البلد / المنطقة",
-    shipping_method_title: "طريقة الشحن",
-    ship_std_name: "الشحن العالمي القياسي",
-    ship_std_time: "7 - 14 يوم عمل",
-    ship_free: "مجاني",
-    ship_exp_name: "شحن دي إتش إل السريع والفاخر",
-    ship_exp_time: "2 - 4 أيام عمل",
-    payment_title: "طريقة الدفع",
-    payment_sim_note: "عملية دفع آمنة محاكاة عبر البطاقة الائتمانية / Apple Pay / PayPal.",
-    total_to_pay: "المجموع الإجمالي",
-    place_order: "تأكيد طلب العطور",
-    success_title: "شكراً لك على الطلب",
-    success_subtitle: "بدأت رحلة عطور SANÉH الخاصة بك",
-    success_desc: "يتم الآن تعبئة وتجهيز العطور بعناية من بانكوك. ستصلك رسالة تأكيد بالبريد الإلكتروني برقم التتبع قريباً.",
-    continue_shopping: "الاستمرار في التسوق",
-    footer_shipping_title: "الشحن والتسليم",
-    footer_shipping_desc: "شحن قياسي عالمي مجاني للطلبات التي تزيد عن 150 دولاراً. شحنات متميزة تُرسل عبر دي إتش إل إكسبريس وفيديكس من بانكوك.",
-    footer_contact_title: "اتصل بنا",
+    // Admin Panel Translations
+    admin_title: "แผงควบคุมสินค้า",
+    admin_helper: "เลือกสินค้าเพื่ออัปเดตรูปภาพการถ่ายภาพระดับลักชัวรีและข้อมูลสินค้า",
+    admin_reset_btn: "รีเซ็ตเป็นแค็ตตาล็อกเริ่มต้น",
+    admin_col_img: "รูปภาพ",
+    admin_col_name: "สินค้า",
+    admin_col_action: "การทำงาน",
+    admin_edit_title: "แก้ไขสินค้า",
+    admin_sec_branding: "รายละเอียดสินค้า",
+    admin_field_pname: "ชื่อสินค้า (แสดงผล)",
+    admin_field_price: "ราคา ($ USD)",
+    admin_sec_imagery: "ภาพถ่ายระดับลักชัวรี",
+    admin_choose_file: "เลือกรูปภาพ",
+    admin_upload_tip: "ไฟล์ PNG หรือ JPG แนะนำอัตราส่วนรูปภาพ 1:1.2",
+    admin_sec_scent: "ข้อมูลการเดินทางแห่งกลิ่นหอม",
+    admin_field_tagline: "สโลแกนกลิ่น",
+    admin_field_desc: "คำอธิบายกลิ่น",
+    admin_sec_recommendations: "สถานที่ท่องเที่ยวแนะนำ",
+    admin_save_changes: "บันทึกการแก้ไข",
 
+    // --- SCENT DATABASE (THAI) ---
+    // 1. Origins of Thailand
+    rain_on_earth: {
+      name: "เรนออนเอิร์ธ", tagline: "กลิ่นไอฝนและไอโอโซนเปียกชื้น",
+      scent_title: "Rain on Earth", scent_desc: "บันทึกกลิ่นอายการบำบัดของหน้าดินแห้งแล้งที่อ้าแขนรับน้ำฝนแรกฤดูมรสุม อบอวลไปด้วยกลิ่นไอดีนเปียกชื้น มอสป่า และโอโซนอุ่นชื้น",
+      temple: "วัดสระเกศ (ภูเขาทอง)", cafe: "Earthy Brews Bangkok", season: "ฝนแรกฤดู (พ.ค. - มิ.ย.)", music: "Bangkok Rain Lofi"
+    },
+    siam_jasmine: {
+      name: "สยามจัสมิน", tagline: "กลิ่นมะลิหลวงสยามหวานละมุน",
+      scent_title: "Siam Jasmine", scent_desc: "ความหอมรัญจวนใจของดอกมะลิหลวงบานสะพรั่งที่เพิ่งเก็บใหม่ในคืนพระจันทร์เต็มดวงสไตล์ชาววัง โบราณ ประณีต และผ่อนคลายลึกซึ้ง",
+      temple: "วัดพระศรีรัตนศาสดาราม (วัดพระแก้ว)", cafe: "Floral Cafe at Napasorn", season: "ฤดูร้อน (มี.ค. - พ.ค.)", music: "Siam Royal Harp"
+    },
+    thai_rice: {
+      name: "ไทยไรซ์", tagline: "ข้าวหอมมะลิไทยไอเตยหอม",
+      scent_title: "Thai Rice", scent_desc: "กลิ่นหอมกรุ่นอบอุ่นใจของข้าวหอมมะลิหุงสุกใหม่ๆ เคล้าไอเตยหอมบดละเอียด ให้ความรู้สึกละมุน อบอุ่น และเป็นเอกลักษณ์ไทยอันคุ้นเคย",
+      temple: "วัดอรุณราชวราราม", cafe: "Pandan & Rice Lab", season: "ฤดูเก็บเกี่ยว (พ.ย. - ม.ค.)", music: "Siam Acoustic Guitar"
+    },
+    temple_incense: {
+      name: "เทมเพิลอินเซนส์", tagline: "ควันธูปไม้จันทน์และวิหารศิลา",
+      scent_title: "Temple Incense", scent_desc: "การผสมผสานอันศักดิ์สิทธิ์ของไม้แก่นจันทน์ ควันกำยานวัดโบราณ และดอกไม้สักการะแห้ง ให้ความรู้สึกสงบเงียบเย็นใจทางจิตวิญญาณ",
+      temple: "วัดพระเชตุพนฯ (วัดโพธิ์)", cafe: "Peace Oriental Teahouse", season: "ฤดูหนาว (พ.ย. - ก.พ.)", music: "Buddhist Chants Ambient"
+    },
+    // 2. Northern Tales
     chiangmai: {
-      name: "تشيانغ ماي",
-      tagline: "مطر بعد الشاي",
-      scent_title: "Rain after Tea",
-      scent_desc: "الرائحة المنعشة لقطرات المطر المتساقطة على أوراق الشاي الأخضر المورقة في مرتفعات تشيانغ ماي الضبابية. تجسيد لشعور المشي الصباحي الهادئ بالقرب من معبد دوي سوتيب.",
-      temple: "معبد وات فرا ثات دوي سوتيب",
-      cafe: "مقهى غوكوتا تي شوكودو",
-      season: "موسم الأمطار والضباب (يوليو - أكتوبر)",
-      music: "موسيقا ضباب الشمال"
+      name: "เชียงใหม่", tagline: "สายฝนหลังไร่ชา",
+      scent_title: "Rain after Tea", scent_desc: "กลิ่นหอมสดชื่นของหยดน้ำค้างและฝนแรกฤดูที่ตกลงบนยอดใบชาเขียวชอุ่ม ณ ขุนเขาเชียงใหม่ที่เคล้าไอหมอก ให้ความรู้สึกเหมือนเช้าวันใหม่ใกล้ดอยสุเทพ",
+      temple: "วัดพระธาตุดอยสุเทพ", cafe: "Gokotta Tea Shokudo", season: "ฤดูฝนและหมอก (ก.ค. - ต.ค.)", music: "Northern Mist Lofi"
     },
+    nan: {
+      name: "น่าน", tagline: "เสียงกระซิบจากป่าน่าน",
+      scent_title: "Nan Forest Whisper", scent_desc: "กลิ่นป่าสนดึกดำบรรพ์สลับเฟิร์นป่าเปียกชื้นของสายหมอกและดินชื้น นำความสงบผ่อนคลายเงียบสงัดของหุบเขาน่านมาสู่ห้องคุณ",
+      temple: "วัดภูมินทร์", cafe: "Nan Valleys Coffee", season: "ไอหมอกฤดูหนาว (ธ.ค. - ม.ค.)", music: "Nan Valley Acoustic"
+    },
+    chiangrai: {
+      name: "เชียงราย", tagline: "ชาอูหลงยอดดอยสูง",
+      scent_title: "Highland Oolong", scent_desc: "ยอดชาคั่วหอมกรุ่น ดอกกล้วยไม้ป่า และไอเย็นบนดอยสูง ชวนให้นึกถึงความงดงามยามพระอาทิตย์ขึ้นเหนือเทือกเขาดอยแม่สลอง",
+      temple: "วัดร่องขุ่น", cafe: "Choui Fong Tea Cafe", season: "ลมหนาวเทือกเขา (พ.ย. - ม.ค.)", music: "Highland Flute"
+    },
+    maehongson: {
+      name: "แม่ฮ่องสอน", tagline: "หมอกสามฤดู",
+      scent_title: "Mist of Three Seasons", scent_desc: "ใบสนป่า มอสสีเขียวชุ่มน้ำ ดอกไม้ป่า และยูคาลิปตัสที่เย็นสดชื่น ให้ความรู้สึกเย็นสะอาด ปลอดโปร่งราวอยู่ในโอบกอดของขุนเขาปาย",
+      temple: "วัดพระธาตุดอยกองมู", cafe: "Coffee in Love Pai", season: "เทศกาลสายหมอก (ต.ค. - พ.ย.)", music: "Pai Acoustic Sunset"
+    },
+    // 3. Island Stories
     phuket: {
-      name: "بوكيت",
-      tagline: "ملح البحر وجوز الهند",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "لمسة منعشة من رياح ملح البحر تلتقي بزيت جوز الهند الدافئ والحلو وكريم الشمس الخفيف. تعيد إليك ذكرى نسيم المحيط الدافئ قبل غروب الشمس في رأس برومثيب.",
-      temple: "معبد وات شالونغ المرموق",
-      cafe: "مقهى ريفريش تروبيكال",
-      season: "الموسم المشمس والجاف (نوفمبر - أبريل)",
-      music: "هدوء غروب الأندامان"
+      name: "ภูเก็ต", tagline: "เกลือทะเลและมะพร้าวหอม",
+      scent_title: "Sea Salt & Coconut", scent_desc: "กลิ่นอายลมทะเลชื่นใจผสานความหวานละมุนจากน้ำมันมะพร้าวและครีมกันแดดอุ่น ๆ ชวนให้นึกถึงช่วงเวลาทองก่อนพระอาทิตย์ลับขอบฟ้าที่แหลมพรหมเทพ",
+      temple: "วัดฉลอง (วัดไชยธาราราม)", cafe: "Refresh Tropical Cafe", season: "ฤดูร้อนและแดดใส (พ.ย. - เม.ย.)", music: "Andaman Sunset Chill"
     },
+    krabi: {
+      name: "กระบี่", tagline: "ถ้ำมรกตกระบี่",
+      scent_title: "Emerald Caves", scent_desc: "กลิ่นคลื่นทะเลสดชื่นปะทะหน้าผาหินปูนและหินแร่เปียกชื้น แทรกด้วยสมุนไพรขิงป่าและใบไม้ริมหาด ให้กลิ่นสะอาดลุ่มลึกแนวแอดเวนเจอร์",
+      temple: "วัดถ้ำเสือ", cafe: "Hub Cafe Krabi", season: "ลมมรสุมสงบ (ธ.ค. - มี.ค.)", music: "Emerald Bay Waves"
+    },
+    samui: {
+      name: "สมุย", tagline: "สวนมะพร้าวชายหาดสมุย",
+      scent_title: "Coconut Grove", scent_desc: "มะพร้าวคั่วไฟหอมหวาน น้ำกะทิสดเข้มข้น วานิลลา และดอกลีลาวดีสีขาวหอมสดชื่น ให้บรรยากาศพักผ่อนเขตร้อนที่น่ารื่นรมย์และอบอุ่นใจ",
+      temple: "วัดปลายแหลม", cafe: "Coco Tam's", season: "หน้าร้อนท้องทะเล (ก.พ. - มิ.ย.)", music: "Island Reggae Chill"
+    },
+    similan: {
+      name: "สิมิลัน", tagline: "น้ำใสสิมิลันสีคราม",
+      scent_title: "Turquoise Sea", scent_desc: "กลิ่นอายโอโซนทะเลสีครามสดชื่น เปลือกมะนาวคั้นสด ไม้ลอยน้ำตากแดด และแอมเบอร์สีขาวสะอาด ให้ความรู้สึกเย็นสดชื่นโปร่งเบาเหมือนลอยอยู่ในน้ำทะเลใส",
+      temple: "วัดสุวรรณคูหา", cafe: "Sea Glass Cafe", season: "ฤดูกาลล่องเรือ (พ.ย. - พ.ค.)", music: "Deep Blue Ambient"
+    },
+    // 4. Royal Heritage
     ayutthaya: {
-      name: "أيوثايا",
-      tagline: "معبد الزمن",
-      scent_title: "Temple of Time",
-      scent_desc: "مزيج روحي ومهدئ من خشب العود القديم، ودخان بخور المعابد، وبتلات اللوتس المتفتحة في المياه الهادئة. تجسيد للزمن المتجمد بين أنقاض الطوب الأحمر التاريخية.",
-      temple: "معبد وات ياي تشايمونغكول",
-      cafe: "مقهى تاثا الأثري",
-      season: "الموسم البارد والمنعش (نوفمبر - فبراير)",
-      music: "أجراس سيام القديمة"
-    }
-  },
-  ja: {
-    enter_btn: "香りの旅へ入る",
-    slogan_title: "私たちは香水を売るのではなく、その場所の記憶を売っています。",
-    slogan_desc: "すべてのボトルは極上の香りの旅。タイのぬくもりと記憶をあなたの自宅へ持ち帰ってください。",
-    map_instruction: "県を選択して、その土地の香りを感じてください",
-    postcard_label: "トラベルカード",
-    flip_prompt: "カードをクリックして裏面のストーリーを読む",
-    rec_temple: "おすすめの寺院",
-    rec_cafe: "おすすめのカフェ",
-    rec_season: "ベストシーズン",
-    ambient_toggle: "現地の環境音を再生",
-    ambient_toggle_active: "環境音をミュート",
-    qr_caption: "QRコードをスキャンして動画を視聴",
-    format_diffuser: "ディフューザー",
-    format_spray: "ルームスプレー",
-    format_candle: "アロマキャンドル",
-    add_to_cart: "この香りをバッグに追加",
-    cart_title: "あなたのフレグランスバッグ",
-    empty_cart: "バッグは現在空です。",
-    subtotal: "小計",
-    checkout: "安全にチェックアウト",
-    checkout_note: "世界中へのプレミアム配送料は決済時に計算されます。",
-    back_flip_btn: "表面に戻す",
-    added_toast: "フレグランスバッグに追加しました！",
-    
-    // Chanel Upgrades
-    brand_category: "タイ香りの紀行",
-    nav_collections: "コレクション",
-    nav_map: "香りマップ",
-    discover_travel_card: "ポストカードを見る",
-    postcard_modal_title: "香りのトラベルポストカード",
-    quick_buy: "ショッピングバッグに追加",
-    item_diffuser: "リードディフューザー",
-    item_spray: "フレグランスルームスプレー",
-    item_candle: "プレミアムアロマキャンドル",
-    footer_terms: "利用規約",
-    footer_privacy: "プライバシーポリシー",
-    
-    // Checkout Upgrades
-    checkout_header: "配送先情報",
-    contact_info_title: "連絡先情報",
-    shipping_address_title: "お届け先住所",
-    field_email: "メールアドレス",
-    field_phone: "電話番号",
-    field_firstname: "名 (First Name)",
-    field_lastname: "姓 (Last Name)",
-    field_address: "住所 (番地・マンション名)",
-    field_city: "市区町村",
-    field_postal: "郵便番号",
-    field_country: "国・地域",
-    shipping_method_title: "配送方法",
-    ship_std_name: "世界標準配送",
-    ship_std_time: "7〜14 営業日",
-    ship_free: "無料",
-    ship_exp_name: "DHL エクスプレス配送",
-    ship_exp_time: "2〜4 営業日",
-    payment_title: "お支払い方法",
-    payment_sim_note: "クレジットカード、Apple Pay、PayPalによる模擬安全決済",
-    total_to_pay: "合計金額",
-    place_order: "注文を確定する",
-    success_title: "ご注文ありがとうございます",
-    success_subtitle: "SANÉHの香りの旅が始まりました",
-    success_desc: "タイの記憶がボトルに丁寧に詰められ、発送の準備を行っています。発送後に追跡番号付きのメールをお送りします。",
-    continue_shopping: "買い物を続ける",
-    footer_shipping_title: "配送と配達",
-    footer_shipping_desc: "150ドル以上のご注文で世界中へ標準送料無料。商品はバンコクからDHL ExpressまたはFedExで迅速に発送されます。",
-    footer_contact_title: "お問い合わせ",
-
-    chiangmai: {
-      name: "チェンマイ",
-      tagline: "雨上がりの茶畑",
-      scent_title: "Rain after Tea",
-      scent_desc: "チェンマイの霧深い高原地帯で、青々とした緑의 茶葉に降り注ぐ恵みの雨の瑞々しい香り。ドイ・ステープ寺院のふもとを歩く穏やかな朝を表現しました。",
-      temple: "ワット・プラタート・ドイ・ステープ",
-      cafe: "Gokotta Tea Shokudo",
-      season: "雨季と朝霧の季節 (7月〜10月)",
-      music: "チェンマイの霧 Lofi"
+      name: "อยุธยา", tagline: "วิหารแห่งกาลเวลา",
+      scent_title: "Temple of Time", scent_desc: "ความเงียบสงบที่ประณีตด้วยกลิ่นกฤษณาควันกำยานวัดโบราณ และดอกบัวบานสะพรั่งเหนือน้ำใส ให้ความรู้สึกเหมือนเวลารอบกายหยุดนิ่งท่ามกลางโบราณสถานอิฐแดง",
+      temple: "วัดใหญ่ชัยมงคล", cafe: "ทาทา คาเฟ่ (Tatha Cafe)", season: "ฤดูหนาวรับลมเย็น (พ.ย. - ก.พ.)", music: "Siam Ancient Chimes"
     },
-    phuket: {
-      name: "プーケット",
-      tagline: "シーソルト＆ココナッツ",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "ミネラル豊富な海風と、甘く温かみのあるココナッツオイルや日焼け止めの香りが優しく溶け合います。プロンテップ岬の夕暮れ時の穏やかな潮風の記憶。",
-      temple: "ワット・シャロン (チャロン寺院)",
-      cafe: "Refresh Tropical Cafe",
-      season: "乾季・晴天の季節 (11月〜4月)",
-      music: "アンダマンの夕暮れBGM"
+    bangkok: {
+      name: "บางกอก", tagline: "มะลิราตรีบางกอก",
+      scent_title: "Midnight Jasmine", scent_desc: "ดอกมะลิราตรีบานสะพรั่งหอมยวนใจหลังเที่ยงคืน โอบล้อมด้วยพิมเสนหอม และยางไม้แอมเบอร์สีทอง ให้เสน่ห์หรูหรา น่าค้นหา ยามค่ำคืนของบางกอกโบราณ",
+      temple: "วัดสระเกศ", cafe: "Chata Specialty Coffee", season: "ค่ำคืนลมเย็น (พ.ย. - ม.ค.)", music: "Bangkok Jazz Lofi"
     },
-    ayutthaya: {
-      name: "アユタヤ",
-      tagline: "時の神殿",
-      scent_title: "Temple of Time",
-      scent_desc: "伝統的な高級沈香、寺院のお香の煙、そして静かな水面に咲く蓮の花が織りなす神秘的で落ち着く香り。赤レンガの遺跡のなかで時が止まったかのような感覚。",
-      temple: "ワット・ヤイ・チャイモンコン",
-      cafe: "Tatha Cafe",
-      season: "涼しい乾季 (11月〜2月)",
-      music: "シャムの古代風鈴"
-    }
-  },
-  ko: {
-    enter_btn: "향기로운 여정 시작하기",
-    slogan_title: "향수를 파는 것이 아닌, 공간의 기억을 팝니다.",
-    slogan_desc: "모든 병은 프리미엄 향기 여정입니다. 태국의 정취와 추억을 집으로 품어가세요.",
-    map_instruction: "지역을 선택하여 고유의 향기를 탐색해보세요",
-    postcard_label: "트래블 카드",
-    flip_prompt: "카드를 클릭하여 뒷면의 이야기를 읽어보세요",
-    rec_temple: "추천 사찰",
-    rec_cafe: "추천 이색 카페",
-    rec_season: "가장 여행하기 좋은 계절",
-    ambient_toggle: "현지 엠비언트 소리 재생",
-    ambient_toggle_active: "엠비언트 소리 음소거",
-    qr_caption: "스캔하여 영상 시청",
-    format_diffuser: "디퓨저",
-    format_spray: "룸 스프레이",
-    format_candle: "향초",
-    add_to_cart: "이 향기를 장바구니에 담기",
-    cart_title: "향기 쇼핑백",
-    empty_cart: "쇼핑백이 현재 비어 있습니다.",
-    subtotal: "합계",
-    checkout: "안전한 결제 진행",
-    checkout_note: "전 세계 프리미엄 배송비는 결제 단계에서 계산됩니다.",
-    back_flip_btn: "앞면으로 뒤집기",
-    added_toast: "쇼핑백에 성공적으로 추가되었습니다!",
-    
-    // Chanel Upgrades
-    brand_category: "태국 향기 기행 시리즈",
-    nav_collections: "컬렉션",
-    nav_map: "센트 맵",
-    discover_travel_card: "여행 엽서 발견하기",
-    postcard_modal_title: "트래블 엽서 보기",
-    quick_buy: "쇼핑백에 추가",
-    item_diffuser: "리드 디퓨저",
-    item_spray: "아로마 룸 스프레이",
-    item_candle: "소이 아로마 향초",
-    footer_terms: "이용약관",
-    footer_privacy: "개인정보처리방침",
-    
-    // Checkout Upgrades
-    checkout_header: "배송 정보",
-    contact_info_title: "연락처 정보",
-    shipping_address_title: "배송지 주소",
-    field_email: "이메일 주소",
-    field_phone: "전화번호",
-    field_firstname: "이름",
-    field_lastname: "성",
-    field_address: "상세 주소 (도로명, 동·호수)",
-    field_city: "도시 (구·시·군)",
-    field_postal: "우편번호",
-    field_country: "국가 / 지역",
-    shipping_method_title: "배송 방법",
-    ship_std_name: "전 세계 일반 배송",
-    ship_std_time: "영업일 기준 7 - 14일",
-    ship_free: "무료",
-    ship_exp_name: "DHL 익스프레스 특송",
-    ship_exp_time: "영업일 기준 2 - 4일",
-    payment_title: "결제 방법",
-    payment_sim_note: "신용카드, Apple Pay, PayPal을 통한 보안 결제 시뮬레이션",
-    total_to_pay: "최종 결제 금액",
-    place_order: "향수 주문하기",
-    success_title: "감사합니다",
-    success_subtitle: "태국의 향기가 당신에게 전달됩니다",
-    success_desc: "태국의 기억을 병에 담아 발송 준비를 하고 있습니다. 발송 후 즉시 송장 번호가 이메일로 발송됩니다.",
-    continue_shopping: "쇼핑 계속하기",
-    footer_shipping_title: "배송 및 인도",
-    footer_shipping_desc: "150달러 이상 주문 시 전 세계 무료 배송. 방콕에서 DHL Express 및 FedEx를 통해 특별 배송됩니다.",
-    footer_contact_title: "고객 지원",
-
-    chiangmai: {
-      name: "치앙마이",
-      tagline: "찻잎 내린 단비",
-      scent_title: "Rain after Tea",
-      scent_desc: "안개 자욱한 치앙마이 고산지대 초록 찻잎 위로 맑게 떨어지는 빗방울의 싱그러운 아로마. 도이수텝 사원 근처를 산책하는 고요한 아침의 여유로움을 선사합니다.",
-      temple: "왓 프라타트 도이수텝 사원",
-      cafe: "Gokotta Tea Shokudo",
-      season: "우기와 물안개 계절 (7월-10월)",
-      music: "북부 안개 로파이"
-    },
-    phuket: {
-      name: "푸켓",
-      tagline: "바다 소금과 코코넛",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "상쾌한 바다 소금 바람과 부드럽고 달콤한 코코넛 오일, 은은한 선크림 향의 조화. 프롬텝 곶의 황홀한 일몰 직전 불어오던 따스한 바닷바람의 기억.",
-      temple: "왓 찰롱 사원",
-      cafe: "Refresh Tropical Cafe",
-      season: "화창하고 건조한 건기 (11월-4월)",
-      music: "안다만 일몰 연주곡"
-    },
-    ayutthaya: {
-      name: "아유타야",
-      tagline: "시간의 사원",
-      scent_title: "Temple of Time",
-      scent_desc: "왓 야이 차이몽콜 사원의 고요함. 오래된 침향나무와 전통 향의 은은한 연기, 잔잔한 물가에 핀 연꽃 향의 조화로운 어우러짐.",
-      temple: "왓 야이 차이몽콜 사원",
-      cafe: "Tatha Cafe",
-      season: "선선한 건기 (11월-2월)",
-      music: "시암 고대 풍경 소리"
-    }
-  },
-  fr: {
-    enter_btn: "Entrer dans le voyage olfactif",
-    slogan_title: "Nous ne vendons pas de parfum, mais la mémoire d'un lieu.",
-    slogan_desc: "Chaque flacon est un voyage olfactif d'exception. Ramenez l'essence et les souvenirs de Thaïlande chez vous.",
-    map_instruction: "Sélectionnez une province pour explorer son parfum",
-    postcard_label: "Carte de Voyage",
-    flip_prompt: "Cliquez sur la carte pour découvrir son histoire",
-    rec_temple: "Temple Recommandé",
-    rec_cafe: "Café Recommandé",
-    rec_season: "Meilleure Saison",
-    ambient_toggle: "Activer l'ambiance sonore",
-    ambient_toggle_active: "Couper le son d'ambiance",
-    qr_caption: "Scanner pour regarder la vidéo",
-    format_diffuser: "Diffuseur",
-    format_spray: "Spray Intérieur",
-    format_candle: "Bougie Parfumée",
-    add_to_cart: "Ajouter ce parfum au panier",
-    cart_title: "Votre Panier Parfum",
-    empty_cart: "Votre panier est actuellement vide.",
-    subtotal: "Sous-total",
-    checkout: "Secure Checkout",
-    checkout_note: "Frais de livraison internationale premium calculés au paiement.",
-    back_flip_btn: "Retourner la carte",
-    added_toast: "Ajouté avec succès à votre panier !",
-    
-    // Chanel Upgrades
-    brand_category: "LES VOYAGES OLFACTIFS DE THAÏLANDE",
-    nav_collections: "Collections",
-    nav_map: "Carte des Senteurs",
-    discover_travel_card: "Découvrir la carte postale",
-    postcard_modal_title: "CARTE POSTALE PARFUMÉE",
-    quick_buy: "Ajouter au panier",
-    item_diffuser: "Diffuseur de parfum à tiges",
-    item_spray: "Vaporisateur d'ambiance",
-    item_candle: "Bougie parfumée de luxe",
-    footer_terms: "Conditions Générales",
-    footer_privacy: "Politique de Confidentialité",
-    
-    // Checkout Upgrades
-    checkout_header: "Informations de livraison",
-    contact_info_title: "Informations de Contact",
-    shipping_address_title: "Adresse de Livraison",
-    field_email: "Adresse E-mail",
-    field_phone: "Numéro de Téléphone",
-    field_firstname: "Prénom",
-    field_lastname: "Nom",
-    field_address: "Adresse (Rue, numéro)",
-    field_city: "Ville",
-    field_postal: "Code Postal",
-    field_country: "Pays / Région",
-    shipping_method_title: "Mode de Livraison",
-    ship_std_name: "Livraison Standard Internationale",
-    ship_std_time: "7 - 14 Jours Ouvrables",
-    ship_free: "Gratuit",
-    ship_exp_name: "Livraison Express Premium DHL",
-    ship_exp_time: "2 - 4 Jours Ouvrables",
-    payment_title: "Moyen de Paiement",
-    payment_sim_note: "Simulation de paiement sécurisé via Carte Bancaire / Apple Pay / PayPal.",
-    total_to_pay: "Total",
-    place_order: "Passer la Commande",
-    success_title: "MERCI POUR VOTRE COMMANDE",
-    success_subtitle: "Votre voyage olfactif SANÉH a commencé.",
-    success_desc: "Un fragment de Thaïlande est en cours de mise en flacon et préparé pour l'expédition. Un e-mail de confirmation avec suivi vous sera envoyé sous peu.",
-    continue_shopping: "Continuer mes Achats",
-    footer_shipping_title: "LIVRAISON & EXPÉDITION",
-    footer_shipping_desc: "Livraison standard internationale gratuite pour toute commande supérieure à 150 $. Envois soignés expédiés de Bangkok via DHL Express et FedEx.",
-    footer_contact_title: "CONTACTEZ-NOUS",
-
-    chiangmai: {
-      name: "Chiang Mai",
-      tagline: "Pluie après le Thé",
-      scent_title: "Rain after Tea",
-      scent_desc: "L'arôme frais des gouttes de pluie tombant sur les feuilles de thé vert et humide sur les hauts plateaux brumeux de Chiang Mai. Évoque une balade matinale sereine près du temple Doi Suthep.",
-      temple: "Wat Phra That Doi Suthep",
-      cafe: "Gokotta Tea Shokudo",
-      season: "Mousson / Pluvieuse (Juil-Oct)",
-      music: "Northern Mist Lofi"
-    },
-    phuket: {
-      name: "Phuket",
-      tagline: "Sel Marin & Noix de Coco",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "L'air vivifiant des vents marins salés mêlé à la douceur de l'huile de coco chaude et de la crème solaire. Le souvenir exact de la brise chaude de l'océan juste avant le coucher du soleil au Cap Promthep.",
-      temple: "Wat Chalong",
-      cafe: "Refresh Tropical Cafe",
-      season: "Ensoleillée / Sèche (Nov-Avr)",
-      music: "Andaman Sunset Chill"
-    },
-    ayutthaya: {
-      name: "Ayutthaya",
-      tagline: "Le Temple du Temps",
-      scent_title: "Temple of Time",
-      scent_desc: "Un mélange spirituel et boisé de bois d'agar ancestral, d'encens de temple et de fleurs de lotus écloses dans des eaux calmes. La sensation du temps suspendu parmi les ruines de briques rouges.",
-      temple: "Wat Yai Chaimongkol",
-      cafe: "Tatha Cafe",
-      season: "Brise Fraîche (Nov-Fév)",
-      music: "Siam Ancient Chimes"
-    }
-  },
-  es: {
-    enter_btn: "Iniciar el viaje olfativo",
-    slogan_title: "No vendemos perfumes, vendemos la memoria de un lugar.",
-    slogan_desc: "Cada frasco es un viaje olfativo de lujo. Llévate la esencia y los recuerdos de Tailandia a tu hogar.",
-    map_instruction: "Selecciona una provincia para explorar su fragancia",
-    postcard_label: "Tarjeta de Viaje",
-    flip_prompt: "Haz clic para voltear la tarjeta y leer la historia",
-    rec_temple: "Templo Recomendado",
-    rec_cafe: "Cafetería Recomendada",
-    rec_season: "Mejor Época",
-    ambient_toggle: "Reproducir sonido ambiental",
-    ambient_toggle_active: "Silenciar sonido ambiental",
-    qr_caption: "Escanea para ver el video",
-    format_diffuser: "Difusor",
-    format_spray: "Spray de Hogar",
-    format_candle: "Vela Aromática",
-    add_to_cart: "Añadir fragancia al carrito",
-    cart_title: "Tu Bolsa de Fragancias",
-    empty_cart: "Tu bolsa de compras está vacía.",
-    subtotal: "Subtotal",
-    checkout: "Secure Checkout",
-    checkout_note: "El envío internacional premium se calcula en el pago.",
-    back_flip_btn: "Voltear al frente",
-    added_toast: "¡Añadido con éxito a tu bolsa!",
-    
-    // Chanel Upgrades
-    brand_category: "VIAJES OLFAVORITOS DE TAILANDIA",
-    nav_collections: "Colecciones",
-    nav_map: "Mapa Olfativo",
-    discover_travel_card: "Ver Tarjeta de Scent",
-    postcard_modal_title: "TARJETA POSTAL DE VIAJE",
-    quick_buy: "Añadir a la bolsa",
-    item_diffuser: "Difusor de varillas",
-    item_spray: "Vaporizador aromático",
-    item_candle: "Vela aromática de lujo",
-    footer_terms: "Términos y Condiciones",
-    footer_privacy: "Política de Privacidad",
-    
-    // Checkout Upgrades
-    checkout_header: "Detalles de Envío",
-    contact_info_title: "Información de Contacto",
-    shipping_address_title: "Dirección de Entrega",
-    field_email: "Correo Electrónico",
-    field_phone: "Número de Teléfono",
-    field_firstname: "Nombre",
-    field_lastname: "Apellido",
-    field_address: "Dirección (Calle, número)",
-    field_city: "Ciudad",
-    field_postal: "Código Postal",
-    field_country: "País / Región",
-    shipping_method_title: "Método de Envío",
-    ship_std_name: "Envío Estándar Mundial",
-    ship_std_time: "7 - 14 Días Hábiles",
-    ship_free: "Gratis",
-    ship_exp_name: "Envío Express DHL de Lujo",
-    ship_exp_time: "2 - 4 Días Hábiles",
-    payment_title: "Método de Pago",
-    payment_sim_note: "Pago seguro simulado mediante Tarjeta de Crédito / Apple Pay / PayPal.",
-    total_to_pay: "Total a Pagar",
-    place_order: "Realizar Pedido de Scent",
-    success_title: "GRACIAS POR TU COMPRA",
-    success_subtitle: "Tu viaje olfativo SANÉH ha comenzado.",
-    success_desc: "Se está embotellando una parte de Tailandia y preparando para el envío. Pronto recibirá un correo electrónico de confirmación con el código de seguimiento.",
-    continue_shopping: "Continuar Comprando",
-    footer_shipping_title: "ENVÍO Y ENTREGA",
-    footer_shipping_desc: "Envío estándar mundial gratuito en pedidos superiores a $150. Envíos seleccionados despachados a través de DHL Express y FedEx desde Bangkok.",
-    footer_contact_title: "CONTACTO",
-
-    chiangmai: {
-      name: "Chiang Mai",
-      tagline: "Lluvia tras el Té",
-      scent_title: "Rain after Tea",
-      scent_desc: "El aroma fresco de las gotas de lluvia cayendo sobre las verdes hojas de té en las tierras altas y brumosas de Chiang Mai. Captura la sensación de un tranquilo paseo matutino cerca de Wat Doi Suthep.",
-      temple: "Wat Phra That Doi Suthep",
-      cafe: "Gokotta Tea Shokudo",
-      season: "Monzón / Lluvioso (Jul-Oct)",
-      music: "Northern Mist Lofi"
-    },
-    phuket: {
-      name: "Phuket",
-      tagline: "Sal Marina & Coco",
-      scent_title: "Sea Salt & Coconut",
-      scent_desc: "La brisa vigorizante de los vientos marinos salados combinada con el dulce aceite de coco y la crema solar templada. El recuerdo exacto de la brise de mar al atardecer en Cabo Promthep.",
-      temple: "Wat Chalong",
-      cafe: "Refresh Tropical Cafe",
-      season: "Soleado / Seco (Nov-Abr)",
-      music: "Andaman Sunset Chill"
-    },
-    ayutthaya: {
-      name: "Ayutthaya",
-      tagline: "El Templo del Tiempo",
-      scent_title: "Temple of Time",
-      scent_desc: "Una mezcla espiritual y terrosa de madera de oud antigua, incienso de templo y flores de loto floreciendo en aguas serenas. Siente el tiempo suspendido entre ladrillos rojos históricos.",
-      temple: "Wat Yai Chaimongkol",
-      cafe: "Tatha Cafe",
-      season: "Brisa Fresca (Nov-Feb)",
-      music: "Siam Ancient Chimes"
+    sukhothai: {
+      name: "สุโขทัย", tagline: "รุ่งอรุณแห่งความสุข",
+      scent_title: "Dawn of Happiness", scent_desc: "ดอกบัวหลวงสีชมพูในสระน้ำโบราณพรมกลิ่นศิลาวิหาร และมัสก์สีทองคำบางเบา ให้ความรู้สึกสงบงาม ร่มเย็น และเต็มเปี่ยมด้วยประวัติศาสตร์สยามรุ่งอรุณ",
+      temple: "วัดมหาธาตุ สุโขทัย", cafe: "Sukhothai Heritage Cafe", season: "ลอยกระทงเผาเทียนเล่นไฟ (พ.ย.)", music: "Siam Traditional Ranat"
     }
   }
 };
+
+// Add fallback translations for other 6 languages to keep file clean but valid
+const otherLangs = ["zh", "ar", "ja", "ko", "fr", "es"];
+otherLangs.forEach(lang => {
+  defaultI18n[lang] = {};
+  // Copy all non-scent keys and structural items from English default
+  Object.keys(defaultI18n.en).forEach(key => {
+    if (typeof defaultI18n.en[key] === "string") {
+      defaultI18n[lang][key] = defaultI18n.en[key];
+    } else {
+      defaultI18n[lang][key] = { ...defaultI18n.en[key] };
+    }
+  });
+});
+
+// Customized Chinese adjustments for names (Optional, for realistic look)
+defaultI18n.zh.coll_origins = "泰国起源";
+defaultI18n.zh.coll_northern = "北方故事";
+defaultI18n.zh.coll_island = "海岛故事";
+defaultI18n.zh.coll_royal = "皇家遗产";
+defaultI18n.zh.admin_title = "产品管理器";
+defaultI18n.zh.admin_save_changes = "保存修改";
+
+// Customized Arabic adjustments for names
+defaultI18n.ar.coll_origins = "أصول تايلاند";
+defaultI18n.ar.coll_northern = "حكايات الشمال";
+defaultI18n.ar.coll_island = "قصص الجزر";
+defaultI18n.ar.coll_royal = "التراث الملكي";
 
 // ==========================================================================
 // LUXURY PRODUCT GRID DATABASES & FALLBACKS
 // ==========================================================================
 
-const productsData = {
-  chiangmai: [
-    { id: "cm_diffuser", type: "diffuser", price: 59.00, img: "assets/diffuser_chiangmai.png" },
-    { id: "cm_candle", type: "candle", price: 49.00, img: "assets/chiang_mai.png" },
-    { id: "cm_spray", type: "spray", price: 45.00, img: "assets/chiang_mai.png" }
-  ],
-  phuket: [
-    { id: "pk_diffuser", type: "diffuser", price: 59.00, img: "assets/phuket.jpg" },
-    { id: "pk_candle", type: "candle", price: 49.00, img: "assets/phuket.jpg" },
-    { id: "pk_spray", type: "spray", price: 45.00, img: "assets/spray_phuket.jpg" }
-  ],
-  ayutthaya: [
-    { id: "ay_diffuser", type: "diffuser", price: 59.00, img: "assets/ayutthaya.jpg" },
-    { id: "ay_candle", type: "candle", price: 49.00, img: "assets/candle_ayutthaya.jpg" },
-    { id: "ay_spray", type: "spray", price: 45.00, img: "assets/ayutthaya.jpg" }
-  ]
+const defaultProductsData = {};
+const collectionsData = {
+  origins: ["rain_on_earth", "siam_jasmine", "thai_rice", "temple_incense"],
+  northern: ["chiangmai", "nan", "chiangrai", "maehongson"],
+  island: ["phuket", "krabi", "samui", "similan"],
+  royal: ["ayutthaya", "bangkok", "sukhothai"]
 };
 
-const imageMapPostcards = {
+// Initialize all 15 scents products catalog dynamically
+const defaultPostcardImages = {
   chiangmai: "assets/chiang_mai.png",
   phuket: "assets/phuket.jpg",
-  ayutthaya: "assets/ayutthaya.jpg"
+  ayutthaya: "assets/ayutthaya.jpg",
+  
+  // Defaults for others
+  rain_on_earth: "assets/ayutthaya.jpg",
+  siam_jasmine: "assets/ayutthaya.jpg",
+  thai_rice: "assets/ayutthaya.jpg",
+  temple_incense: "assets/ayutthaya.jpg",
+  nan: "assets/chiang_mai.png",
+  chiangrai: "assets/chiang_mai.png",
+  maehongson: "assets/chiang_mai.png",
+  krabi: "assets/phuket.jpg",
+  samui: "assets/phuket.jpg",
+  similan: "assets/phuket.jpg",
+  bangkok: "assets/ayutthaya.jpg",
+  sukhothai: "assets/ayutthaya.jpg"
 };
+
+const defaultProductPhotos = {
+  chiangmai_diffuser: "assets/diffuser_chiangmai.png",
+  ayutthaya_candle: "assets/candle_ayutthaya.jpg",
+  // Others fallback to respective default postcard frames
+};
+
+Object.keys(collectionsData).forEach(colKey => {
+  collectionsData[colKey].forEach(scentId => {
+    defaultProductsData[scentId] = [
+      {
+        id: `${scentId}_diffuser`,
+        type: "diffuser",
+        price: 59.00,
+        img: defaultProductPhotos[`${scentId}_diffuser`] || defaultPostcardImages[scentId]
+      },
+      {
+        id: `${scentId}_candle`,
+        type: "candle",
+        price: 49.00,
+        img: defaultProductPhotos[`${scentId}_candle`] || defaultPostcardImages[scentId]
+      },
+      {
+        id: `${scentId}_spray`,
+        type: "spray",
+        price: 45.00,
+        img: defaultProductPhotos[`${scentId}_spray`] || defaultPostcardImages[scentId]
+      }
+    ];
+  });
+});
+
+// ==========================================================================
+// STATE LOADERS & SAVERS (LOCAL STORAGE CACHING)
+// ==========================================================================
+
+let i18n = {};
+let productsData = {};
+
+function initCatalogStorage() {
+  const cachedI18n = localStorage.getItem("saneh_i18n");
+  const cachedProducts = localStorage.getItem("saneh_products");
+
+  if (cachedI18n) {
+    i18n = JSON.parse(cachedI18n);
+  } else {
+    i18n = JSON.parse(JSON.stringify(defaultI18n));
+    localStorage.setItem("saneh_i18n", JSON.stringify(i18n));
+  }
+
+  if (cachedProducts) {
+    productsData = JSON.parse(cachedProducts);
+  } else {
+    productsData = JSON.parse(JSON.stringify(defaultProductsData));
+    localStorage.setItem("saneh_products", JSON.stringify(productsData));
+  }
+}
+
+function saveCatalogStorage() {
+  localStorage.setItem("saneh_i18n", JSON.stringify(i18n));
+  localStorage.setItem("saneh_products", JSON.stringify(productsData));
+}
+
+function resetCatalogToDefault() {
+  localStorage.removeItem("saneh_i18n");
+  localStorage.removeItem("saneh_products");
+  location.reload();
+}
+
+initCatalogStorage();
 
 // ==========================================================================
 // STATE MANAGEMENT & DOM FLOW
 // ==========================================================================
 
 let activeLang = "en";
-let activeProvince = "chiangmai";
+let activeCollection = "origins";
+let activeProvince = "rain_on_earth"; // default first scent
 let cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -849,10 +511,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const collectionViewPanel = document.getElementById("collection-view-panel");
   const mapViewPanel = document.getElementById("map-view-panel");
   
-  // Province selection row
-  const provNavItems = document.querySelectorAll(".prov-nav-item");
-  const mapPins = document.querySelectorAll(".map-pin");
-  
   // Travel Card Modal elements
   const openTravelCardBtn = document.getElementById("open-travel-card-btn");
   const closeTravelCardBtn = document.getElementById("close-travel-card-btn");
@@ -869,6 +527,32 @@ document.addEventListener("DOMContentLoaded", () => {
   // Media Player elements
   const simulatedMusicBtn = document.getElementById("simulated-music-play");
   const ambientAudioBtn = document.getElementById("ambient-audio-btn");
+
+  // Admin Portal elements
+  const adminToggleBtn = document.getElementById("admin-toggle-btn");
+  const closeAdminBtn = document.getElementById("close-admin-btn");
+  const adminEditBackBtn = document.getElementById("admin-edit-back-btn");
+  const adminDrawer = document.getElementById("admin-drawer");
+  const adminDrawerOverlay = document.getElementById("admin-drawer-overlay");
+  
+  const adminViewList = document.getElementById("admin-view-list");
+  const adminViewEdit = document.getElementById("admin-view-edit");
+  const adminProductListBody = document.getElementById("admin-product-list-body");
+  
+  const adminProductEditForm = document.getElementById("admin-product-edit-form");
+  const editProdId = document.getElementById("edit-prod-id");
+  const editProdNameDisplay = document.getElementById("edit-prod-name-display");
+  const editProdPrice = document.getElementById("edit-prod-price");
+  const editProdImagePreview = document.getElementById("edit-prod-image-preview");
+  const editProdImageFile = document.getElementById("edit-prod-image-file");
+  
+  const editScentTagline = document.getElementById("edit-scent-tagline");
+  const editScentDesc = document.getElementById("edit-scent-desc");
+  const editRecTemple = document.getElementById("edit-rec-temple");
+  const editRecCafe = document.getElementById("edit-rec-cafe");
+  const editRecSeason = document.getElementById("edit-rec-season");
+  
+  const adminResetCatalogBtn = document.getElementById("admin-reset-catalog-btn");
 
   // ==================== GATEKEEPER ACTIONS ====================
   
@@ -891,8 +575,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHeaderLangDisplay(activeLang);
     document.body.classList.remove("gatekeeper-active");
     
-    // Draw initial product grid
-    renderProductGrid(activeProvince);
+    // Initialize Collection Nav & Scent Nav
+    renderCollectionNav();
+    selectCollection(activeCollection);
   });
   
   // Lang Toggle dropdown in header
@@ -902,9 +587,97 @@ document.addEventListener("DOMContentLoaded", () => {
       activeLang = item.getAttribute("data-lang");
       applyTranslations(activeLang);
       updateHeaderLangDisplay(activeLang);
-      renderProductGrid(activeProvince); // redraw grid for translation
+      renderCollectionNav();
+      renderScentNav(activeCollection);
+      renderProductGrid(activeProvince);
     });
   });
+
+  // ==================== DUAL-LEVEL NAV RENDERING ====================
+  
+  function renderCollectionNav() {
+    document.querySelectorAll(".coll-nav-item").forEach(btn => {
+      const colKey = btn.getAttribute("data-collection");
+      btn.textContent = i18n[activeLang][`coll_${colKey}`] || btn.textContent;
+      
+      // Remove old listeners to avoid stacking
+      btn.replaceWith(btn.cloneNode(true));
+    });
+    
+    // Re-attach fresh click handlers
+    document.querySelectorAll(".coll-nav-item").forEach(btn => {
+      const colKey = btn.getAttribute("data-collection");
+      if (colKey === activeCollection) btn.classList.add("active");
+      
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".coll-nav-item").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        selectCollection(colKey);
+      });
+    });
+  }
+
+  function selectCollection(colKey) {
+    activeCollection = colKey;
+    renderScentNav(colKey);
+    
+    // Select first scent in the newly selected collection
+    const firstScent = collectionsData[colKey][0];
+    selectScent(firstScent);
+  }
+
+  function renderScentNav(colKey) {
+    const container = document.getElementById("scent-nav-container");
+    container.innerHTML = "";
+    
+    const scents = collectionsData[colKey];
+    scents.forEach(scentId => {
+      const scentData = i18n[activeLang][scentId] || defaultI18n[activeLang][scentId];
+      
+      const btn = document.createElement("button");
+      btn.className = `scent-nav-item ${scentId === activeProvince ? 'active' : ''}`;
+      btn.setAttribute("data-scent", scentId);
+      btn.textContent = scentData.name;
+      
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".scent-nav-item").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        selectScent(scentId);
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  function selectScent(scentId) {
+    if (activeProvince === scentId) {
+      // Just make sure values are rendered
+      updateActiveScentDetails(activeLang, scentId);
+      renderProductGrid(scentId);
+      return;
+    }
+    
+    stopAudioStates();
+    
+    // Reset postcard flipping
+    travelCard3d.classList.remove("flipped");
+    
+    activeProvince = scentId;
+    
+    // Sync Scent Sub-nav styling
+    document.querySelectorAll(".scent-nav-item").forEach(btn => {
+      if (btn.getAttribute("data-scent") === scentId) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+
+    // Update body background theme based on collection group
+    document.body.className = `bg-${activeCollection}`;
+    
+    updateActiveScentDetails(activeLang, scentId);
+    renderProductGrid(scentId);
+  }
 
   // ==================== NAVIGATION TABS TOGGLES ====================
   
@@ -922,59 +695,32 @@ document.addEventListener("DOMContentLoaded", () => {
     collectionViewPanel.classList.add("hidden");
   });
 
-  // ==================== PROVINCE SELECTION (NAV BAR & MAP PINS) ====================
-  
-  const selectProvince = (provName) => {
-    if (activeProvince === provName) return;
-    
-    // Stop all playing audio of old province
-    stopAudioStates();
-    
-    // Reset travel card state inside the modal
-    travelCard3d.classList.remove("flipped");
-    
-    activeProvince = provName;
-    
-    // Update active nav items
-    provNavItems.forEach(item => {
-      if (item.getAttribute("data-province") === provName) {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
-    
-    // Update active map pins
-    mapPins.forEach(pin => {
-      if (pin.getAttribute("data-province") === provName) {
-        pin.classList.add("active");
-      } else {
-        pin.classList.remove("active");
-      }
-    });
-    
-    // Update body background class
-    document.body.className = `bg-${provName}`;
-    
-    // Render Scent details
-    updateActiveScentDetails(activeLang, provName);
-    
-    // Render new product list grid
-    renderProductGrid(provName);
-  };
-  
-  provNavItems.forEach(item => {
-    item.addEventListener("click", () => {
-      selectProvince(item.getAttribute("data-province"));
-    });
-  });
-  
-  mapPins.forEach(pin => {
+  // Map Pins redirection to dynamic categories
+  document.querySelectorAll(".map-pin").forEach(pin => {
     pin.addEventListener("click", () => {
       const prov = pin.getAttribute("data-province");
-      selectProvince(prov);
       
-      // Auto-toggle back to collections grid view so they can see product photos immediately!
+      // Map standard pins back to our collection hierarchy
+      if (prov === "chiangmai") {
+        document.querySelector("[data-collection='northern']").click();
+        setTimeout(() => {
+          const matchingScentBtn = document.querySelector("[data-scent='chiangmai']");
+          if (matchingScentBtn) matchingScentBtn.click();
+        }, 50);
+      } else if (prov === "phuket") {
+        document.querySelector("[data-collection='island']").click();
+        setTimeout(() => {
+          const matchingScentBtn = document.querySelector("[data-scent='phuket']");
+          if (matchingScentBtn) matchingScentBtn.click();
+        }, 50);
+      } else if (prov === "ayutthaya") {
+        document.querySelector("[data-collection='royal']").click();
+        setTimeout(() => {
+          const matchingScentBtn = document.querySelector("[data-scent='ayutthaya']");
+          if (matchingScentBtn) matchingScentBtn.click();
+        }, 50);
+      }
+      
       setTimeout(() => {
         showCollectionBtn.click();
       }, 500);
@@ -1044,30 +790,57 @@ document.addEventListener("DOMContentLoaded", () => {
   
   ambientAudioBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    const audioEl = document.getElementById(`audio-${activeProvince}`);
+    
+    // We only have real audio elements for chiangmai, phuket, ayutthaya. Others fallback silently or use those.
+    let mappedAudioId = activeProvince;
+    if (!["chiangmai", "phuket", "ayutthaya"].includes(activeProvince)) {
+      // Fallback based on collection category
+      if (activeCollection === "origins") mappedAudioId = "ayutthaya";
+      else if (activeCollection === "northern") mappedAudioId = "chiangmai";
+      else if (activeCollection === "island") mappedAudioId = "phuket";
+      else mappedAudioId = "ayutthaya";
+    }
+    
+    const audioEl = document.getElementById(`audio-${mappedAudioId}`);
     const ambientIcon = document.getElementById("ambient-icon-state");
     
     if (ambientPlaying) {
-      audioEl.pause();
+      if (audioEl) audioEl.pause();
       ambientPlaying = false;
       ambientAudioBtn.classList.remove("active");
       ambientIcon.setAttribute("data-lucide", "volume-x");
       ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle;
     } else {
-      audioEl.play().then(() => {
+      if (audioEl) {
+        audioEl.play().then(() => {
+          ambientPlaying = true;
+          ambientAudioBtn.classList.add("active");
+          ambientIcon.setAttribute("data-lucide", "volume-2");
+          ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle_active;
+        }).catch(err => {
+          console.log("Audio play blocked by browser policy.", err);
+        });
+      } else {
+        // Mock ambient audio play if audio tag missing
         ambientPlaying = true;
         ambientAudioBtn.classList.add("active");
         ambientIcon.setAttribute("data-lucide", "volume-2");
         ambientAudioBtn.querySelector("span").textContent = i18n[activeLang].ambient_toggle_active;
-      }).catch(err => {
-        console.log("Audio play blocked by browser policy.", err);
-      });
+      }
     }
     lucide.createIcons();
   });
   
   function stopAudioStates() {
-    const audioEl = document.getElementById(`audio-${activeProvince}`);
+    let mappedAudioId = activeProvince;
+    if (!["chiangmai", "phuket", "ayutthaya"].includes(activeProvince)) {
+      if (activeCollection === "origins") mappedAudioId = "ayutthaya";
+      else if (activeCollection === "northern") mappedAudioId = "chiangmai";
+      else if (activeCollection === "island") mappedAudioId = "phuket";
+      else mappedAudioId = "ayutthaya";
+    }
+    
+    const audioEl = document.getElementById(`audio-${mappedAudioId}`);
     if (audioEl) {
       audioEl.pause();
       audioEl.currentTime = 0;
@@ -1141,8 +914,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cartViewItems.className = "cart-drawer-view active-view";
     cartViewCheckout.className = "cart-drawer-view hidden-view";
     cartViewSuccess.className = "cart-drawer-view hidden-view";
-    
-    // Clear inputs
     checkoutAddressForm.reset();
   };
 
@@ -1164,6 +935,157 @@ document.addEventListener("DOMContentLoaded", () => {
   
   shipStdRadio.addEventListener("change", updateCheckoutTotal);
   shipExpRadio.addEventListener("change", updateCheckoutTotal);
+
+  // ==================== ADMIN PANEL MANAGER DRAWER ====================
+  
+  adminToggleBtn.addEventListener("click", () => {
+    renderAdminProductList();
+    adminDrawer.classList.add("active");
+    adminDrawerOverlay.classList.add("active");
+  });
+
+  const closeAdmin = () => {
+    adminDrawer.classList.remove("active");
+    adminDrawerOverlay.classList.remove("active");
+    setTimeout(() => {
+      adminViewList.className = "admin-drawer-view active-view";
+      adminViewEdit.className = "admin-drawer-view hidden-view";
+      adminProductEditForm.reset();
+    }, 400);
+  };
+
+  closeAdminBtn.addEventListener("click", closeAdmin);
+  adminDrawerOverlay.addEventListener("click", closeAdmin);
+  adminEditBackBtn.addEventListener("click", () => {
+    adminViewEdit.className = "admin-drawer-view hidden-view";
+    adminViewList.className = "admin-drawer-view active-view";
+  });
+
+  adminResetCatalogBtn.addEventListener("click", () => {
+    if (confirm("Are you sure you want to reset all custom product images and metadata to default?")) {
+      resetCatalogToDefault();
+    }
+  });
+
+  function renderAdminProductList() {
+    adminProductListBody.innerHTML = "";
+    
+    // Loop through all collections and scents to list products in a neat table
+    Object.keys(collectionsData).forEach(colKey => {
+      collectionsData[colKey].forEach(scentId => {
+        const scentData = i18n[activeLang][scentId];
+        const products = productsData[scentId];
+        
+        products.forEach(prod => {
+          const typeLabel = i18n[activeLang][`item_${prod.type}`];
+          
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>
+              <img src="${prod.img}" class="admin-table-img" alt="Prod Image">
+            </td>
+            <td>
+              <span class="admin-table-name-cell">${scentData.name}</span>
+              <span class="admin-table-format-cell">${typeLabel} — $${prod.price.toFixed(2)}</span>
+            </td>
+            <td>
+              <button class="admin-edit-action-btn" onclick="openEditProductForm('${scentId}', '${prod.id}')">
+                Edit
+              </button>
+            </td>
+          `;
+          adminProductListBody.appendChild(tr);
+        });
+      });
+    });
+  }
+
+  // Edit image FileReader container
+  let uploadedImageBase64 = null;
+  editProdImageFile.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        uploadedImageBase64 = event.target.result;
+        editProdImagePreview.src = uploadedImageBase64;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Global callback for opening the edit form
+  window.openEditProductForm = (scentId, prodId) => {
+    uploadedImageBase64 = null;
+    editProdImageFile.value = "";
+    
+    const products = productsData[scentId];
+    const product = products.find(p => p.id === prodId);
+    if (!product) return;
+    
+    const scentData = i18n[activeLang][scentId];
+    const typeLabel = i18n[activeLang][`item_${product.type}`];
+    
+    editProdId.value = JSON.stringify({ scentId, prodId });
+    editProdNameDisplay.value = `${scentData.name} — ${typeLabel}`;
+    editProdPrice.value = product.price;
+    editProdImagePreview.src = product.img;
+    
+    editScentTagline.value = scentData.tagline;
+    editScentDesc.value = scentData.scent_desc;
+    editRecTemple.value = scentData.temple;
+    editRecCafe.value = scentData.cafe;
+    editRecSeason.value = scentData.season;
+    
+    adminViewList.className = "admin-drawer-view hidden-view";
+    adminViewEdit.className = "admin-drawer-view active-view";
+    
+    lucide.createIcons();
+  };
+
+  adminProductEditForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const keys = JSON.parse(editProdId.value);
+    const { scentId, prodId } = keys;
+    
+    // 1. Update Product Details
+    const products = productsData[scentId];
+    const product = products.find(p => p.id === prodId);
+    if (product) {
+      product.price = parseFloat(editProdPrice.value);
+      if (uploadedImageBase64) {
+        product.img = uploadedImageBase64;
+      }
+    }
+    
+    // 2. Update Scent Metadata (Saves directly to active lang node)
+    const scentData = i18n[activeLang][scentId];
+    if (scentData) {
+      scentData.tagline = editScentTagline.value;
+      scentData.scent_title = editScentTagline.value; // sync title and tagline
+      scentData.scent_desc = editScentDesc.value;
+      scentData.temple = editRecTemple.value;
+      scentData.cafe = editRecCafe.value;
+      scentData.season = editRecSeason.value;
+    }
+    
+    // 3. Save to localStorage
+    saveCatalogStorage();
+    
+    // 4. Update UI Components
+    applyTranslations(activeLang);
+    renderProductGrid(activeProvince);
+    
+    // Toast alert
+    showToastNotification(`Successfully updated ${editProdNameDisplay.value}!`);
+    
+    // Return to list view
+    adminViewEdit.className = "admin-drawer-view hidden-view";
+    adminViewList.className = "admin-drawer-view active-view";
+    renderAdminProductList();
+  });
+
 });
 
 // ==========================================================================
@@ -1199,7 +1121,7 @@ function updateHeaderLangDisplay(lang) {
 }
 
 function updateActiveScentDetails(lang, province) {
-  const tData = i18n[lang][province];
+  const tData = i18n[lang][province] || defaultI18n[lang][province];
   
   // Upper Banner Content
   document.getElementById("banner-scent-title").textContent = tData.scent_title;
@@ -1208,7 +1130,14 @@ function updateActiveScentDetails(lang, province) {
   // Travel Postcard Modal Front
   document.getElementById("card-front-title").textContent = tData.name;
   document.getElementById("card-front-tagline").textContent = `"${tData.tagline}"`;
-  document.getElementById("card-front-img").src = imageMapPostcards[province];
+  
+  // Get postcard image (using Chiang Mai / Phuket / Ayutthaya defaults or fallback colors)
+  const defaultImages = {
+    chiangmai: "assets/chiang_mai.png",
+    phuket: "assets/phuket.jpg",
+    ayutthaya: "assets/ayutthaya.jpg"
+  };
+  document.getElementById("card-front-img").src = defaultImages[province] || defaultImages.ayutthaya;
   document.getElementById("card-front-img").alt = tData.name;
   
   // Travel Postcard Modal Back Scent
@@ -1229,8 +1158,8 @@ function renderProductGrid(province) {
   const gridContainer = document.getElementById("product-grid-container");
   gridContainer.innerHTML = "";
   
-  const products = productsData[province];
-  const tData = i18n[activeLang][province];
+  const products = productsData[province] || defaultProductsData[province];
+  const tData = i18n[activeLang][province] || defaultI18n[activeLang][province];
   
   products.forEach(prod => {
     const formatLabel = i18n[activeLang][`item_${prod.type}`];
@@ -1264,7 +1193,7 @@ function renderProductGrid(province) {
 // ==========================================================================
 
 window.addProductToCart = (province, formatType, price, imagePath) => {
-  const provinceDetails = i18n[activeLang][province];
+  const provinceDetails = i18n[activeLang][province] || defaultI18n[activeLang][province];
   const formatLabel = i18n[activeLang][`item_${formatType}`];
   
   const cartItem = {
@@ -1286,7 +1215,8 @@ function updateCartUI() {
   const subtotalEl = document.getElementById("cart-subtotal-val");
   const checkoutBtn = document.getElementById("checkout-btn");
   
-  countBadge.textContent = cart.length;
+  if (countBadge) countBadge.textContent = cart.length;
+  if (!container) return; // guard check for gatekeeper
   
   if (cart.length === 0) {
     container.innerHTML = `<p class="empty-cart-message">${i18n[activeLang].empty_cart}</p>`;
