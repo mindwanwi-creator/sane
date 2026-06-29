@@ -1,5 +1,5 @@
 // ==========================================================================
-// TRANSLATION DICTIONARIES (8 LANGUAGES - CHANEL LUXURY UPGRADE)
+// TRANSLATION DICTIONARIES (8 LANGUAGES - CHANEL LUXURY & CHECKOUT UPGRADE)
 // ==========================================================================
 
 const i18n = {
@@ -28,7 +28,7 @@ const i18n = {
     back_flip_btn: "Flip to Front",
     added_toast: "Added to fragrance bag!",
     
-    // Chanel Upgrades translations
+    // Chanel Upgrades
     brand_category: "LES VOYAGES OLFACTIFS",
     nav_collections: "Collections",
     nav_map: "Scent Map",
@@ -40,6 +40,36 @@ const i18n = {
     item_candle: "Scented Candle",
     footer_terms: "Terms & Conditions",
     footer_privacy: "Privacy Policy",
+    
+    // Checkout Upgrades
+    checkout_header: "Shipping Details",
+    contact_info_title: "Contact Information",
+    shipping_address_title: "Delivery Address",
+    field_email: "Email Address",
+    field_phone: "Phone Number",
+    field_firstname: "First Name",
+    field_lastname: "Last Name",
+    field_address: "Street Address",
+    field_city: "City",
+    field_postal: "Postal/Zip Code",
+    field_country: "Country / Region",
+    shipping_method_title: "Shipping Method",
+    ship_std_name: "Standard Worldwide Delivery",
+    ship_std_time: "7 - 14 Business Days",
+    ship_free: "Free",
+    ship_exp_name: "DHL Express Luxury Shipping",
+    ship_exp_time: "2 - 4 Business Days",
+    payment_title: "Payment Method",
+    payment_sim_note: "Simulated secure checkout via Credit Card / Apple Pay / PayPal.",
+    total_to_pay: "Total",
+    place_order: "Place Fragrance Order",
+    success_title: "THANK YOU",
+    success_subtitle: "Your SANÉH fragrance journey has begun.",
+    success_desc: "A piece of Thailand is being bottled and prepared for shipment. A confirmation email with tracking details will be sent shortly.",
+    continue_shopping: "Continue Shopping",
+    footer_shipping_title: "SHIPPING & DELIVERY",
+    footer_shipping_desc: "Complimentary standard worldwide shipping on orders over $150. Curated deliveries dispatched via DHL Express & FedEx from Bangkok.",
+    footer_contact_title: "CONTACT US",
     
     // Scent data translations
     chiangmai: {
@@ -98,18 +128,48 @@ const i18n = {
     back_flip_btn: "กลับไปด้านหน้า",
     added_toast: "เพิ่มสินค้าลงในตะกร้าแล้ว!",
     
-    // Chanel Upgrades translations
+    // Chanel Upgrades
     brand_category: "การเดินทางผ่านกลิ่นอายแห่งสยาม",
     nav_collections: "คอลเลกชัน",
     nav_map: "แผนที่กลิ่นหอม",
     discover_travel_card: "ค้นพบการ์ดบันทึกเดินทาง",
-    postcard_modal_title: "การ์ดทราเวลการ์ดบันทึกการเดินทาง",
+    postcard_modal_title: "ทราเวลการ์ดบันทึกการเดินทาง",
     quick_buy: "ใส่ถุงสินค้า",
     item_diffuser: "ก้านไม้หอมกระจายกลิ่น",
-    item_spray: "สเปรย์ปรับอากาศ",
+    item_spray: "สเปรย์ปรับอากาศห้อง",
     item_candle: "เทียนหอมอโรมา",
     footer_terms: "ข้อตกลงและเงื่อนไข",
     footer_privacy: "นโยบายความเป็นส่วนตัว",
+    
+    // Checkout Upgrades
+    checkout_header: "ข้อมูลการจัดส่ง",
+    contact_info_title: "ข้อมูลการติดต่อ",
+    shipping_address_title: "ที่อยู่จัดส่งสินค้า",
+    field_email: "อีเมลแอดเดรส",
+    field_phone: "เบอร์โทรศัพท์",
+    field_firstname: "ชื่อ",
+    field_lastname: "นามสกุล",
+    field_address: "ที่อยู่ (ถนน, ซอย, เลขที่)",
+    field_city: "จังหวัด / อำเภอ",
+    field_postal: "รหัสไปรษณีย์",
+    field_country: "ประเทศ / ภูมิภาค",
+    shipping_method_title: "วิธีการจัดส่ง",
+    ship_std_name: "จัดส่งแบบมาตรฐานทั่วโลก",
+    ship_std_time: "7 - 14 วันทำการ",
+    ship_free: "ฟรี",
+    ship_exp_name: "จัดส่งด่วนพิเศษ DHL Express",
+    ship_exp_time: "2 - 4 วันทำการ",
+    payment_title: "วิธีการชำระเงิน",
+    payment_sim_note: "ระบบจำลองการชำระเงินด้วย บัตรเครดิต / Apple Pay / PayPal อย่างปลอดภัย",
+    total_to_pay: "ยอดชำระเงินรวม",
+    place_order: "ยืนยันสั่งซื้อสินค้า",
+    success_title: "ขอบคุณสำหรับการสั่งซื้อ",
+    success_subtitle: "การเดินทางแห่งกลิ่นหอมของ SANÉH เริ่มต้นขึ้นแล้ว",
+    success_desc: "เสน่ห์แห่งเมืองไทยกำลังได้รับการบรรจุขวดและจัดเตรียมแพ็คเกจอย่างประณีตเพื่อส่งให้คุณ เราจะส่งอีเมลยืนยันพร้อมเลขพัสดุให้คุณในไม่ช้า",
+    continue_shopping: "เลือกซื้อสินค้าต่อ",
+    footer_shipping_title: "การจัดส่งและการส่งมอบ",
+    footer_shipping_desc: "จัดส่งมาตรฐานฟรีทั่วโลกเมื่อยอดสั่งซื้อเกิน $150 คัดสรรบริการและส่งตรงผ่าน DHL Express และ FedEx จากกรุงเทพฯ",
+    footer_contact_title: "ช่องทางการติดต่อ",
 
     chiangmai: {
       name: "เชียงใหม่",
@@ -179,6 +239,36 @@ const i18n = {
     item_candle: "手工香薰蜡烛",
     footer_terms: "条款与条件",
     footer_privacy: "隐私政策",
+    
+    // Checkout Upgrades
+    checkout_header: "配送详情",
+    contact_info_title: "联系信息",
+    shipping_address_title: "送货地址",
+    field_email: "电子邮件",
+    field_phone: "电话号码",
+    field_firstname: "名字",
+    field_lastname: "姓氏",
+    field_address: "街道地址",
+    field_city: "城市/省份",
+    field_postal: "邮政编码",
+    field_country: "国家/地区",
+    shipping_method_title: "配送方式",
+    ship_std_name: "全球标准配送",
+    ship_std_time: "7 - 14 个工作日",
+    ship_free: "免费",
+    ship_exp_name: "DHL 奢华特快专递",
+    ship_exp_time: "2 - 4 个工作日",
+    payment_title: "支付方式",
+    payment_sim_note: "安全支付模拟（支持信用卡、Apple Pay及PayPal）",
+    total_to_pay: "总计金额",
+    place_order: "提交香氛订单",
+    success_title: "感谢您的购买",
+    success_subtitle: "您的 SANÉH 香氛之旅已开启",
+    success_desc: "泰国的记忆已为您精细装瓶，并正在进行发货准备。您的确认邮件与物流单号将很快发送给您。",
+    continue_shopping: "继续购物",
+    footer_shipping_title: "配送与交付",
+    footer_shipping_desc: "订单金额满 150 美元即可享受全球免费标准配送。所有包件均从曼谷通过 DHL Express 或 FedEx 精心发运。",
+    footer_contact_title: "联系我们",
 
     chiangmai: {
       name: "清迈",
@@ -248,6 +338,36 @@ const i18n = {
     item_candle: "شمعة معطرة فاخرة",
     footer_terms: "الشروط والأحكام",
     footer_privacy: "سياسة الخصوصية",
+    
+    // Checkout Upgrades
+    checkout_header: "تفاصيل الشحن",
+    contact_info_title: "معلومات الاتصال",
+    shipping_address_title: "عنوان التسليم",
+    field_email: "البريد الإلكتروني",
+    field_phone: "رقم الهاتف",
+    field_firstname: "الاسم الأول",
+    field_lastname: "اسم العائلة",
+    field_address: "عنوان الشارع",
+    field_city: "المدينة / المحافظة",
+    field_postal: "الرمز البريدي",
+    field_country: "البلد / المنطقة",
+    shipping_method_title: "طريقة الشحن",
+    ship_std_name: "الشحن العالمي القياسي",
+    ship_std_time: "7 - 14 يوم عمل",
+    ship_free: "مجاني",
+    ship_exp_name: "شحن دي إتش إل السريع والفاخر",
+    ship_exp_time: "2 - 4 أيام عمل",
+    payment_title: "طريقة الدفع",
+    payment_sim_note: "عملية دفع آمنة محاكاة عبر البطاقة الائتمانية / Apple Pay / PayPal.",
+    total_to_pay: "المجموع الإجمالي",
+    place_order: "تأكيد طلب العطور",
+    success_title: "شكراً لك على الطلب",
+    success_subtitle: "بدأت رحلة عطور SANÉH الخاصة بك",
+    success_desc: "يتم الآن تعبئة وتجهيز العطور بعناية من بانكوك. ستصلك رسالة تأكيد بالبريد الإلكتروني برقم التتبع قريباً.",
+    continue_shopping: "الاستمرار في التسوق",
+    footer_shipping_title: "الشحن والتسليم",
+    footer_shipping_desc: "شحن قياسي عالمي مجاني للطلبات التي تزيد عن 150 دولاراً. شحنات متميزة تُرسل عبر دي إتش إل إكسبريس وفيديكس من بانكوك.",
+    footer_contact_title: "اتصل بنا",
 
     chiangmai: {
       name: "تشيانغ ماي",
@@ -282,7 +402,7 @@ const i18n = {
   },
   ja: {
     enter_btn: "香りの旅へ入る",
-    slogan_title: "私たちは香水を売るのではなく、その場所의 記憶を売っています。",
+    slogan_title: "私たちは香水を売るのではなく、その場所の記憶を売っています。",
     slogan_desc: "すべてのボトルは極上の香りの旅。タイのぬくもりと記憶をあなたの自宅へ持ち帰ってください。",
     map_instruction: "県を選択して、その土地の香りを感じてください",
     postcard_label: "トラベルカード",
@@ -317,12 +437,42 @@ const i18n = {
     item_candle: "プレミアムアロマキャンドル",
     footer_terms: "利用規約",
     footer_privacy: "プライバシーポリシー",
+    
+    // Checkout Upgrades
+    checkout_header: "配送先情報",
+    contact_info_title: "連絡先情報",
+    shipping_address_title: "お届け先住所",
+    field_email: "メールアドレス",
+    field_phone: "電話番号",
+    field_firstname: "名 (First Name)",
+    field_lastname: "姓 (Last Name)",
+    field_address: "住所 (番地・マンション名)",
+    field_city: "市区町村",
+    field_postal: "郵便番号",
+    field_country: "国・地域",
+    shipping_method_title: "配送方法",
+    ship_std_name: "世界標準配送",
+    ship_std_time: "7〜14 営業日",
+    ship_free: "無料",
+    ship_exp_name: "DHL エクスプレス配送",
+    ship_exp_time: "2〜4 営業日",
+    payment_title: "お支払い方法",
+    payment_sim_note: "クレジットカード、Apple Pay、PayPalによる模擬安全決済",
+    total_to_pay: "合計金額",
+    place_order: "注文を確定する",
+    success_title: "ご注文ありがとうございます",
+    success_subtitle: "SANÉHの香りの旅が始まりました",
+    success_desc: "タイの記憶がボトルに丁寧に詰められ、発送の準備を行っています。発送後に追跡番号付きのメールをお送りします。",
+    continue_shopping: "買い物を続ける",
+    footer_shipping_title: "配送と配達",
+    footer_shipping_desc: "150ドル以上のご注文で世界中へ標準送料無料。商品はバンコクからDHL ExpressまたはFedExで迅速に発送されます。",
+    footer_contact_title: "お問い合わせ",
 
     chiangmai: {
       name: "チェンマイ",
       tagline: "雨上がりの茶畑",
       scent_title: "Rain after Tea",
-      scent_desc: "チェンマイの霧深い高原地帯で、青々とした緑の茶葉に降り注ぐ恵みの雨の瑞々しい香り。ドイ・ステープ寺院のふもとを歩く穏やかな朝を表現しました。",
+      scent_desc: "チェンマイの霧深い高原地帯で、青々とした緑의 茶葉に降り注ぐ恵みの雨の瑞々しい香り。ドイ・ステープ寺院のふもとを歩く穏やかな朝を表現しました。",
       temple: "ワット・プラタート・ドイ・ステープ",
       cafe: "Gokotta Tea Shokudo",
       season: "雨季と朝霧の季節 (7月〜10月)",
@@ -386,6 +536,36 @@ const i18n = {
     item_candle: "소이 아로마 향초",
     footer_terms: "이용약관",
     footer_privacy: "개인정보처리방침",
+    
+    // Checkout Upgrades
+    checkout_header: "배송 정보",
+    contact_info_title: "연락처 정보",
+    shipping_address_title: "배송지 주소",
+    field_email: "이메일 주소",
+    field_phone: "전화번호",
+    field_firstname: "이름",
+    field_lastname: "성",
+    field_address: "상세 주소 (도로명, 동·호수)",
+    field_city: "도시 (구·시·군)",
+    field_postal: "우편번호",
+    field_country: "국가 / 지역",
+    shipping_method_title: "배송 방법",
+    ship_std_name: "전 세계 일반 배송",
+    ship_std_time: "영업일 기준 7 - 14일",
+    ship_free: "무료",
+    ship_exp_name: "DHL 익스프레스 특송",
+    ship_exp_time: "영업일 기준 2 - 4일",
+    payment_title: "결제 방법",
+    payment_sim_note: "신용카드, Apple Pay, PayPal을 통한 보안 결제 시뮬레이션",
+    total_to_pay: "최종 결제 금액",
+    place_order: "향수 주문하기",
+    success_title: "감사합니다",
+    success_subtitle: "태국의 향기가 당신에게 전달됩니다",
+    success_desc: "태국의 기억을 병에 담아 발송 준비를 하고 있습니다. 발송 후 즉시 송장 번호가 이메일로 발송됩니다.",
+    continue_shopping: "쇼핑 계속하기",
+    footer_shipping_title: "배송 및 인도",
+    footer_shipping_desc: "150달러 이상 주문 시 전 세계 무료 배송. 방콕에서 DHL Express 및 FedEx를 통해 특별 배송됩니다.",
+    footer_contact_title: "고객 지원",
 
     chiangmai: {
       name: "치앙마이",
@@ -438,7 +618,7 @@ const i18n = {
     cart_title: "Votre Panier Parfum",
     empty_cart: "Votre panier est actuellement vide.",
     subtotal: "Sous-total",
-    checkout: "Paiement Sécurisé",
+    checkout: "Secure Checkout",
     checkout_note: "Frais de livraison internationale premium calculés au paiement.",
     back_flip_btn: "Retourner la carte",
     added_toast: "Ajouté avec succès à votre panier !",
@@ -449,12 +629,42 @@ const i18n = {
     nav_map: "Carte des Senteurs",
     discover_travel_card: "Découvrir la carte postale",
     postcard_modal_title: "CARTE POSTALE PARFUMÉE",
-    quick_buy: "Ajouter au panier bag",
+    quick_buy: "Ajouter au panier",
     item_diffuser: "Diffuseur de parfum à tiges",
     item_spray: "Vaporisateur d'ambiance",
     item_candle: "Bougie parfumée de luxe",
     footer_terms: "Conditions Générales",
     footer_privacy: "Politique de Confidentialité",
+    
+    // Checkout Upgrades
+    checkout_header: "Informations de livraison",
+    contact_info_title: "Informations de Contact",
+    shipping_address_title: "Adresse de Livraison",
+    field_email: "Adresse E-mail",
+    field_phone: "Numéro de Téléphone",
+    field_firstname: "Prénom",
+    field_lastname: "Nom",
+    field_address: "Adresse (Rue, numéro)",
+    field_city: "Ville",
+    field_postal: "Code Postal",
+    field_country: "Pays / Région",
+    shipping_method_title: "Mode de Livraison",
+    ship_std_name: "Livraison Standard Internationale",
+    ship_std_time: "7 - 14 Jours Ouvrables",
+    ship_free: "Gratuit",
+    ship_exp_name: "Livraison Express Premium DHL",
+    ship_exp_time: "2 - 4 Jours Ouvrables",
+    payment_title: "Moyen de Paiement",
+    payment_sim_note: "Simulation de paiement sécurisé via Carte Bancaire / Apple Pay / PayPal.",
+    total_to_pay: "Total",
+    place_order: "Passer la Commande",
+    success_title: "MERCI POUR VOTRE COMMANDE",
+    success_subtitle: "Votre voyage olfactif SANÉH a commencé.",
+    success_desc: "Un fragment de Thaïlande est en cours de mise en flacon et préparé pour l'expédition. Un e-mail de confirmation avec suivi vous sera envoyé sous peu.",
+    continue_shopping: "Continuer mes Achats",
+    footer_shipping_title: "LIVRAISON & EXPÉDITION",
+    footer_shipping_desc: "Livraison standard internationale gratuite pour toute commande supérieure à 150 $. Envois soignés expédiés de Bangkok via DHL Express et FedEx.",
+    footer_contact_title: "CONTACTEZ-NOUS",
 
     chiangmai: {
       name: "Chiang Mai",
@@ -507,7 +717,7 @@ const i18n = {
     cart_title: "Tu Bolsa de Fragancias",
     empty_cart: "Tu bolsa de compras está vacía.",
     subtotal: "Subtotal",
-    checkout: "Pago Seguro",
+    checkout: "Secure Checkout",
     checkout_note: "El envío internacional premium se calcula en el pago.",
     back_flip_btn: "Voltear al frente",
     added_toast: "¡Añadido con éxito a tu bolsa!",
@@ -519,11 +729,41 @@ const i18n = {
     discover_travel_card: "Ver Tarjeta de Scent",
     postcard_modal_title: "TARJETA POSTAL DE VIAJE",
     quick_buy: "Añadir a la bolsa",
-    item_diffuser: "Difusor de varillas aromáticas",
-    item_spray: "Vaporizador aromático de hogar",
+    item_diffuser: "Difusor de varillas",
+    item_spray: "Vaporizador aromático",
     item_candle: "Vela aromática de lujo",
     footer_terms: "Términos y Condiciones",
     footer_privacy: "Política de Privacidad",
+    
+    // Checkout Upgrades
+    checkout_header: "Detalles de Envío",
+    contact_info_title: "Información de Contacto",
+    shipping_address_title: "Dirección de Entrega",
+    field_email: "Correo Electrónico",
+    field_phone: "Número de Teléfono",
+    field_firstname: "Nombre",
+    field_lastname: "Apellido",
+    field_address: "Dirección (Calle, número)",
+    field_city: "Ciudad",
+    field_postal: "Código Postal",
+    field_country: "País / Región",
+    shipping_method_title: "Método de Envío",
+    ship_std_name: "Envío Estándar Mundial",
+    ship_std_time: "7 - 14 Días Hábiles",
+    ship_free: "Gratis",
+    ship_exp_name: "Envío Express DHL de Lujo",
+    ship_exp_time: "2 - 4 Días Hábiles",
+    payment_title: "Método de Pago",
+    payment_sim_note: "Pago seguro simulado mediante Tarjeta de Crédito / Apple Pay / PayPal.",
+    total_to_pay: "Total a Pagar",
+    place_order: "Realizar Pedido de Scent",
+    success_title: "GRACIAS POR TU COMPRA",
+    success_subtitle: "Tu viaje olfativo SANÉH ha comenzado.",
+    success_desc: "Se está embotellando una parte de Tailandia y preparando para el envío. Pronto recibirá un correo electrónico de confirmación con el código de seguimiento.",
+    continue_shopping: "Continuar Comprando",
+    footer_shipping_title: "ENVÍO Y ENTREGA",
+    footer_shipping_desc: "Envío estándar mundial gratuito en pedidos superiores a $150. Envíos seleccionados despachados a través de DHL Express y FedEx desde Bangkok.",
+    footer_contact_title: "CONTACTO",
 
     chiangmai: {
       name: "Chiang Mai",
@@ -564,18 +804,18 @@ const i18n = {
 
 const productsData = {
   chiangmai: [
-    { id: "cm_diffuser", type: "diffuser", price: 59.00, img: "assets/diffuser_chiangmai.png" }, // featured product image
+    { id: "cm_diffuser", type: "diffuser", price: 59.00, img: "assets/diffuser_chiangmai.png" },
     { id: "cm_candle", type: "candle", price: 49.00, img: "assets/chiang_mai.png" },
     { id: "cm_spray", type: "spray", price: 45.00, img: "assets/chiang_mai.png" }
   ],
   phuket: [
     { id: "pk_diffuser", type: "diffuser", price: 59.00, img: "assets/phuket.jpg" },
     { id: "pk_candle", type: "candle", price: 49.00, img: "assets/phuket.jpg" },
-    { id: "pk_spray", type: "spray", price: 45.00, img: "assets/spray_phuket.jpg" } // featured product image
+    { id: "pk_spray", type: "spray", price: 45.00, img: "assets/spray_phuket.jpg" }
   ],
   ayutthaya: [
     { id: "ay_diffuser", type: "diffuser", price: 59.00, img: "assets/ayutthaya.jpg" },
-    { id: "ay_candle", type: "candle", price: 49.00, img: "assets/candle_ayutthaya.jpg" }, // featured product image
+    { id: "ay_candle", type: "candle", price: 49.00, img: "assets/candle_ayutthaya.jpg" },
     { id: "ay_spray", type: "spray", price: 45.00, img: "assets/ayutthaya.jpg" }
   ]
 };
@@ -857,10 +1097,73 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeCart = () => {
     cartDrawer.classList.remove("active");
     cartOverlay.classList.remove("active");
+    resetCartViews();
   };
   
   cartCloseBtn.addEventListener("click", closeCart);
   cartOverlay.addEventListener("click", closeCart);
+
+  // ==================== CHECKOUT STEP FLOW ====================
+  const checkoutBtn = document.getElementById("checkout-btn");
+  const checkoutBackBtn = document.getElementById("checkout-back-btn");
+  const checkoutAddressForm = document.getElementById("checkout-address-form");
+  const successCloseBtn = document.getElementById("success-close-btn");
+  
+  const cartViewItems = document.getElementById("cart-view-items");
+  const cartViewCheckout = document.getElementById("cart-view-checkout");
+  const cartViewSuccess = document.getElementById("cart-view-success");
+  
+  checkoutBtn.addEventListener("click", () => {
+    cartViewItems.className = "cart-drawer-view hidden-view";
+    cartViewCheckout.className = "cart-drawer-view active-view";
+    updateCheckoutTotal();
+  });
+  
+  checkoutBackBtn.addEventListener("click", () => {
+    cartViewCheckout.className = "cart-drawer-view hidden-view";
+    cartViewItems.className = "cart-drawer-view active-view";
+  });
+  
+  checkoutAddressForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    cart = [];
+    updateCartUI();
+    
+    cartViewCheckout.className = "cart-drawer-view hidden-view";
+    cartViewSuccess.className = "cart-drawer-view active-view";
+  });
+  
+  successCloseBtn.addEventListener("click", () => {
+    closeCart();
+  });
+  
+  const resetCartViews = () => {
+    cartViewItems.className = "cart-drawer-view active-view";
+    cartViewCheckout.className = "cart-drawer-view hidden-view";
+    cartViewSuccess.className = "cart-drawer-view hidden-view";
+    
+    // Clear inputs
+    checkoutAddressForm.reset();
+  };
+
+  // Shipping cost recalculation
+  const shipStdRadio = document.getElementById("ship-std-radio");
+  const shipExpRadio = document.getElementById("ship-exp-radio");
+  
+  const updateCheckoutTotal = () => {
+    let subtotal = 0;
+    cart.forEach(item => subtotal += item.price);
+    
+    let total = subtotal;
+    if (shipExpRadio.checked) {
+      total += 25.00;
+    }
+    
+    document.getElementById("checkout-total-val").textContent = `$${total.toFixed(2)}`;
+  };
+  
+  shipStdRadio.addEventListener("change", updateCheckoutTotal);
+  shipExpRadio.addEventListener("change", updateCheckoutTotal);
 });
 
 // ==========================================================================

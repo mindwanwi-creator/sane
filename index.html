@@ -325,30 +325,141 @@
       </div>
     </div>
 
-    <!-- SHOPPING CART DRAWER -->
+    <!-- SHOPPING CART DRAWER (MULTI-VIEW) -->
     <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
     <div class="cart-drawer" id="cart-drawer">
-      <div class="cart-header">
-        <h3 data-i18n="cart_title">Your Fragrance Bag</h3>
-        <button class="close-cart-btn" id="close-cart-btn">
-          <i data-lucide="x" class="icon-sm"></i>
-        </button>
-      </div>
       
-      <div class="cart-items" id="cart-items-container">
-        <p class="empty-cart-message" data-i18n="empty_cart">Your bag is currently empty.</p>
-      </div>
-      
-      <div class="cart-footer">
-        <div class="cart-subtotal-row">
-          <span data-i18n="subtotal">Subtotal</span>
-          <span class="subtotal-val" id="cart-subtotal-val">$0.00</span>
+      <!-- VIEW 1: SHOPPING BAG ITEMS -->
+      <div class="cart-drawer-view active-view" id="cart-view-items">
+        <div class="cart-header">
+          <h3 data-i18n="cart_title">Your Fragrance Bag</h3>
+          <button class="close-cart-btn" id="close-cart-btn">
+            <i data-lucide="x" class="icon-sm"></i>
+          </button>
         </div>
-        <button class="checkout-btn" id="checkout-btn" disabled>
-          <span data-i18n="checkout">Secure Checkout</span>
-        </button>
-        <p class="checkout-note" data-i18n="checkout_note">Worldwide premium shipping calculated at checkout.</p>
+        
+        <div class="cart-items" id="cart-items-container">
+          <p class="empty-cart-message" data-i18n="empty_cart">Your bag is currently empty.</p>
+        </div>
+        
+        <div class="cart-footer">
+          <div class="cart-subtotal-row">
+            <span data-i18n="subtotal">Subtotal</span>
+            <span class="subtotal-val" id="cart-subtotal-val">$0.00</span>
+          </div>
+          <button class="checkout-btn" id="checkout-btn" disabled>
+            <span data-i18n="checkout">Secure Checkout</span>
+          </button>
+          <p class="checkout-note" data-i18n="checkout_note">Worldwide premium shipping calculated at checkout.</p>
+        </div>
       </div>
+
+      <!-- VIEW 2: CHECKOUT SHIPPING ADDRESS FORM -->
+      <div class="cart-drawer-view hidden-view" id="cart-view-checkout">
+        <div class="cart-header">
+          <h3 data-i18n="checkout_header">Shipping Details</h3>
+          <button class="close-cart-btn" id="checkout-back-btn">
+            <i data-lucide="arrow-left" class="icon-sm"></i>
+          </button>
+        </div>
+        
+        <form class="checkout-form" id="checkout-address-form">
+          <div class="form-scroll-container">
+            
+            <h4 class="form-section-title" data-i18n="contact_info_title">Contact Information</h4>
+            <div class="form-group">
+              <label for="checkout-email" data-i18n="field_email">Email Address</label>
+              <input type="email" id="checkout-email" required placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="checkout-phone" data-i18n="field_phone">Phone Number</label>
+              <input type="tel" id="checkout-phone" required placeholder="+66 81 234 5678">
+            </div>
+
+            <h4 class="form-section-title" data-i18n="shipping_address_title">Delivery Address</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-first-name" data-i18n="field_firstname">First Name</label>
+                <input type="text" id="checkout-first-name" required placeholder="John">
+              </div>
+              <div class="form-group">
+                <label for="checkout-last-name" data-i18n="field_lastname">Last Name</label>
+                <input type="text" id="checkout-last-name" required placeholder="Doe">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="checkout-address" data-i18n="field_address">Street Address</label>
+              <input type="text" id="checkout-address" required placeholder="123 Sukhumvit Road">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-city" data-i18n="field_city">City</label>
+                <input type="text" id="checkout-city" required placeholder="Bangkok">
+              </div>
+              <div class="form-group">
+                <label for="checkout-postal" data-i18n="field_postal">Postal/Zip Code</label>
+                <input type="text" id="checkout-postal" required placeholder="10110">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-country" data-i18n="field_country">Country / Region</label>
+              <input type="text" id="checkout-country" required placeholder="Thailand">
+            </div>
+
+            <h4 class="form-section-title" data-i18n="shipping_method_title">Shipping Method</h4>
+            <div class="shipping-options-list">
+              <label class="shipping-option-item">
+                <input type="radio" name="shipping-method" value="standard" checked id="ship-std-radio">
+                <div class="ship-details">
+                  <span class="ship-name" data-i18n="ship_std_name">Standard Worldwide Delivery</span>
+                  <span class="ship-time" data-i18n="ship_std_time">7 - 14 Business Days</span>
+                </div>
+                <span class="ship-price" data-i18n="ship_free">Free</span>
+              </label>
+              
+              <label class="shipping-option-item">
+                <input type="radio" name="shipping-method" value="dhl" id="ship-exp-radio">
+                <div class="ship-details">
+                  <span class="ship-name" data-i18n="ship_exp_name">DHL Express Luxury Shipping</span>
+                  <span class="ship-time" data-i18n="ship_exp_time">2 - 4 Business Days</span>
+                </div>
+                <span class="ship-price">$25.00</span>
+              </label>
+            </div>
+
+            <!-- Payment Simulation note -->
+            <h4 class="form-section-title" data-i18n="payment_title">Payment Method</h4>
+            <p class="payment-simulation-note" data-i18n="payment_sim_note">Simulated secure checkout via Credit Card / Apple Pay / PayPal.</p>
+
+          </div>
+
+          <div class="cart-footer">
+            <div class="cart-subtotal-row">
+              <span data-i18n="total_to_pay">Total</span>
+              <span class="subtotal-val" id="checkout-total-val">$0.00</span>
+            </div>
+            <button type="submit" class="checkout-btn" id="place-order-btn">
+              <span data-i18n="place_order">Place Fragrance Order</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- VIEW 3: ORDER SUCCESS CONFIRMATION -->
+      <div class="cart-drawer-view hidden-view" id="cart-view-success">
+        <div class="success-screen-content">
+          <i data-lucide="sparkles" class="success-sparkle-icon pulse-animation"></i>
+          <h3 class="success-title" data-i18n="success_title">THANK YOU</h3>
+          <p class="success-subtitle" data-i18n="success_subtitle">Your SANÉH fragrance journey has begun.</p>
+          <div class="success-divider"></div>
+          <p class="success-desc" data-i18n="success_desc">A piece of Thailand is being bottled and prepared for shipment. A confirmation email with tracking details will be sent shortly.</p>
+          <button class="continue-shopping-btn" id="success-close-btn" data-i18n="continue_shopping">Continue Shopping</button>
+        </div>
+      </div>
+
     </div>
 
     <!-- TOAST NOTIFICATION -->
@@ -368,13 +479,29 @@
       <source src="https://assets.mixkit.co/active_storage/sfx/1647/1647-84.wav" type="audio/wav">
     </audio>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (Upgraded with Shipping & Contacts) -->
     <footer class="site-footer">
-      <p class="footer-copy">&copy; 2026 SANÉH Fragrances. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#" data-i18n="footer_terms">Terms & Conditions</a>
-        <span class="footer-dot">•</span>
-        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4 class="footer-title" data-i18n="footer_shipping_title">SHIPPING & DELIVERY</h4>
+          <p class="footer-text" data-i18n="footer_shipping_desc">Complimentary standard worldwide shipping on orders over $150. Curated deliveries dispatched via DHL Express & FedEx from Bangkok.</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-title" data-i18n="footer_contact_title">CONTACT US</h4>
+          <p class="footer-text">
+            Email: <a href="mailto:concierge@saneh-fragrances.com">concierge@saneh-fragrances.com</a><br>
+            Line: <a href="#">@saneh</a> | Instagram: <a href="#">@saneh.fragrances</a><br>
+            WhatsApp: <a href="#">+66 2 123 4567</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 SANÉH Fragrances. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#" data-i18n="footer_terms">Terms & Conditions</a>
+          <span class="footer-dot">•</span>
+          <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+        </div>
       </div>
     </footer>
     
